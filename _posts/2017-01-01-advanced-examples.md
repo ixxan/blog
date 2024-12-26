@@ -7,10 +7,29 @@ categories: media
 
 ![Swiss Alps](https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg)
 
+<div style="display: flex; flex-direction: row;">
+
+<!-- Sidebar Table of Contents -->
+<div style="width: 20%; padding-right: 20px; border-right: 1px solid #ccc; position: sticky; top: 0;">
+  <h3>Table of Contents</h3>
+  <ul style="list-style-type: none; padding: 0;">
+    <li><a href="#mathjax">MathJax</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#gists">Gists</a></li>
+    <li><a href="#images">Images</a></li>
+    <li><a href="#embedded-content">Embedded content</a></li>
+  </ul>
+</div>
+
+<!-- Main Content -->
+<div style="width: 80%; padding-left: 20px;">
+
+![Swiss Alps](https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg)
+
 
 ## MathJax
 
-You can enable MathJax by setting `mathjax: true` on a page or globally in the `_config.yml`. Some examples:
+You  MathJax by setting `mathjax: true` on a page or globally in the `_config.yml`. Some examples:
 
 [Euler's formula](https://en.wikipedia.org/wiki/Euler%27s_formula) relates the  complex exponential function to the trigonometric functions.
 
