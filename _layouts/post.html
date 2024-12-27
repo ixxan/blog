@@ -4,20 +4,6 @@ layout: default
 
 <article>
   {% include meta.html post=page %}
-  
-  <div class="content-wrapper">
-    <!-- Sticky Table of Contents -->
-    <div id="toc">
-      <h3>Table of Contents</h3>
-      <ul>
-        <li><a href="#section-1">Speech Technology Fundamentals</a></li>
-        <li><a href="#section-2">Low-Resource Language Speech Research</a></li>
-        <li><a href="#section-3">Uyghur Speech Technology</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </div>
-
-    <!-- Main Content -->
   {{ content }}
   {% if page.comments != false and site.comments.isso or site.comments.disqus %}
     <hr>
