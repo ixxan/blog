@@ -1,5 +1,6 @@
 ---
 title:  "Speech Technology for Low-Resource Languages: Advancements and Resources for Uyghur"
+author: "Irpan Abdurahman"
 mathjax: false
 layout: post
 categories: media
@@ -20,7 +21,7 @@ Thus, through this blog, I would like to:
 
 By addressing these topics, I hope to inspire further efforts in preserving linguistic diversity and advancing speech technologies that can support a wider range of languages.
 
-## Table of Contents
+# Table of Contents
 1. [Speech Technology Fundamentals](#section-1)
     * [Phonetics Basics](#phonetics-basics)
     * [Acoustics Basics](#acoustics-basics)
@@ -30,11 +31,11 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 3. [Uyghur Speech Technology](#section-3)
 4. [References](#references)
 
-## Speech Technology Fundamentals
+# Speech Technology Fundamentals
 <a id="section-1"></a>
 Speech technology has evolved significantly in the past decade, enabling devices to understand and generate human speech. To fully appreciate these advancements, it’s important to understand the fundamentals of speech systems.
 
-### Phonetics Basics
+## Phonetics Basics
 <a id="phonetics-basics"></a>
 Phonetics studies the sounds in human speech, vital for converting between written text and spoken language.
 
@@ -50,7 +51,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 
 *The 44 phonemes of Standard English based on [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).*
 
-### Acoustics Basics
+## Acoustics Basics
 <a id="acoustics-basics"></a>
 
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
@@ -68,7 +69,7 @@ Libraries like [ibrosa](https://librosa.org/doc/latest/index.html) and [pydub](h
 
 *Comparison of Mel spectrograms for an audio clip saying "Hello World" at 16 kHz and 44.1 kHz sampling rates. Higher sampling rates capture more detailed information, as seen in the richer frequency representation at 44.1 kHz.*
 
-### Speech Applications
+## Speech Applications
 <a id="speech-applications"></a>
 Speech technology encompasses a broad range of applications that facilitate various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
 
@@ -82,11 +83,11 @@ Some other common speech technology tasks include:
 * **Speaker Diarization**: Identifying the speaker at any given moment in an audio clip.
 * **Keyword Detection**: Detecting specific words or phrases in continuous speech, often used for wake-word detection in voice assistants.
 
-### Notable Architectures
+## Notable Architectures
 <a id="notable-architectures"></a>
 There have been various architectures proposed for various speech tasks throughout the years. Here I would discuss 2 popular types. 
 
-#### Traditional Approach: Hidden Markov Models (HHM)
+### Traditional Approach: Hidden Markov Models (HHM)
 Hidden Markov Models (HMMs) were the foundation of many early ASR and TTS systems before the rise of deep learning-based models. They model speech as sequences of phonemes with probabilities for transitions and observations. 
 
 To better understand it, let’s try to recognize the word “hello” from a speech signal using HMMs. Here’s our set up:
@@ -102,7 +103,7 @@ Now to walk through the recognizing process:
 4. Finally, after processing the sequence of phonemes (states) and their corresponding observations, the model uses the transition and emission probabilities to determine the most likely sequence of phonemes that led to the observed acoustic features, which may led to /h/, /e/, /l/, /l/, /o/, or “hello.”
 
 
-#### Modern Approach: End-to-End (E2E)
+### Modern Approach: End-to-End (E2E)
 With the rise of deep learning methods in ML since the 2010s, researchers have achieved significant success with deep learning-based speech models, particularly End-to-End (E2E) architectures. E2E architectures eliminate the need for hand-crafted features and separate language and acoustic models by integrating both into a single neural network. Two common E2E structures are based on Connectionist Temporal Classification (CTC) loss functions and Sequence-to-Sequence (Seq2Seq) modeling. Below is how the word “hello” can be recognized using each approach:
 
 **CTC (Connectionist Temporal Classification)**: Encoder-only structure <a href="https://distill.pub/2017/ctc/" style="text-decoration: none;" target="_blank" title="Check out this tutorial to learn more">[5]</a>
