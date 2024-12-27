@@ -25,7 +25,7 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 1. [Speech Technology Fundamentals](#section-1)
     * [Phonetics Basics](#phonetics-basics)
     * [Acoustics Basics](#acoustics-basics)
-    * [Speech Applications](#speech-application)
+    * [Speech Applications](#speech-applications)
     * [Notable Architectures](#notable-architectures)
 2. [Low-Resource Language Speech Research](#section-2)
 3. [Uyghur Speech Technology](#section-3)
