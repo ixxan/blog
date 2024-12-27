@@ -19,7 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:irpan.abdurahman32@gmail.com"}
+  - {title: Linkedin, icon: linkedin, url: "https://www.linkedin.com/in/irpan-abdurahman/"}
   - {title: HuggingFace, icon: smile, url: "https://huggingface.co/ixxan"}
   - {title: Github, icon: github, url: "https://github.com/ixxan"}
 

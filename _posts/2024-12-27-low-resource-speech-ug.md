@@ -50,12 +50,11 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 
 ### Acoustics Basics
 <a id="acoustics-basics"></a>
+
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
+<img src="./../images/vocal.png" alt="Vocal" style="float: right; max-width: 30%; margin-left: 10px; margin-top: 10px; height: auto;">
 
 Speech production begins with our vocal folds creating a basic sound when air passes through them. However, before the sound exits the mouth, it travels through the vocal tract (throat, mouth, and nose) which shapes and modifies it. These modifications produce **formants**, which are resonant frequencies essential for distinguishing sounds in a language, especially vowels <a href="http://www.voicescienceworks.org/harmonics-vs-formants.html" style="text-decoration: none;" target="_blank" title="Visit Voice Science Works for more info">[2]</a>.
-
-<img src="./../images/vocal.png" alt="Vocal" style="max-width: 100%; height: auto;">
-
 
 To analyze these acoustic properties, we use tools like the spectrogram. A **spectrogram** is a visual representation of the spectrum of frequencies in a sound signal over time. It shows how the frequency content of an audio signal changes, allowing us to visualize speech as a sequence of sounds. The **Mel spectrogram** is a variation that uses the Mel scale, which aligns more closely with human hearing. The Mel scale compresses high-frequency components, where our hearing is less sensitive, and expands low-frequency components, where we are more sensitive.<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Visit this HuggingFace course for more info">[3]</a>. Mel spectrograms are widely used as input features for speech models.
 
