@@ -1,5 +1,5 @@
 ---
-title:  "Speech Technology for Low-Resource Languages: Advancements and Implementations for Uyghur"
+title:  "Speech Technology for Low-Resource Languages: Advancements and Resources for Uyghur"
 mathjax: false
 layout: post
 categories: media
@@ -18,18 +18,26 @@ Thus, through this blog, I would like to:
 
 By addressing these topics, I hope to inspire further efforts in preserving linguistic diversity and advancing speech technologies that can support a wider range of languages.
 
-## Section 1
 
-Embed code by puttin
+
+## Table of Contents
+1. [Section 1: Embed Code](#section-1)
+2. [Section 2: ABC](#section-2)
+3. [Section 3: Upload](#section-3)
+4. [References](#references)
+
+## Section 1
+<a id="section-1"></a>
+Embed code by putting
 
 ## Section 2
-
+<a id="section-2"></a>
 ABC
 
 ## Section 3
-
+<a id="section-3"></a>
 Upload
 
 ## Reference
-
+<a id="references"></a>
 You can also embed a lot of stuff, for example from YouTube, using the `embed.html` include.
