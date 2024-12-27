@@ -1,5 +1,5 @@
 ---
-title:  "Advanced examples"
+title:  "Speech Technology for Low-Resource Languages: Advancements and Implementations for Uyghur"
 mathjax: false
 layout: post
 categories: media
