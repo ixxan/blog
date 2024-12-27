@@ -22,6 +22,8 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 
 ## Table of Contents
 1. [Speech Technology Fundamentals](#section-1)
+   * [Phonetics Basics](#phonetics-basics)
+   * [Acoustics Basics](#acoustics-basics)
 2. [Low-Resource Language Speech Research](#section-2)
 3. [Uyghur Speech Technology](#section-3)
 4. [References](#references)
@@ -31,6 +33,7 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 Speech technology has evolved significantly in the past decade, enabling devices to understand and generate human speech. To fully appreciate these advancements, it’s important to understand the fundamentals of speech systems.
 
 ### Phonetics Basics
+<a id="phonetics-basics"></a>
 Phonetics studies the sounds in human speech, vital for converting between written text and spoken language.
 
 A **grapheme** is the smallest unit of a writing system that represents a sound or a meaningful unit of language. For example, in English, the letter “b” is a grapheme representing the /b/ sound. 
@@ -46,6 +49,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 *The 44 phonemes of Standard English based on [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).*
 
 ### Acoustics Basics
+<a id="acoustics-basics"></a>
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
 
 Speech production begins with our vocal folds creating a basic sound when air passes through them. However, before the sound exits the mouth, it travels through the vocal tract (throat, mouth, and nose) which shapes and modifies it. These modifications produce **formants**, which are resonant frequencies essential for distinguishing sounds in a language, especially vowels <a href="http://www.voicescienceworks.org/harmonics-vs-formants.html" style="text-decoration: none;" target="_blank" title="Visit Voice Science Works for more info">[2]</a>.

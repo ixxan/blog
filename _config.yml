@@ -23,6 +23,10 @@ external:                  # shows a footer with social links - for available ic
   - {title: HuggingFace, icon: smile, url: "https://huggingface.co/ixxan"}
   - {title: Github, icon: github, url: "https://github.com/ixxan"}
 
+sass:
+  sass_dir: _sass
+  style: compressed
+  
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
