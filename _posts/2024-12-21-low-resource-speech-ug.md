@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-<img src="./../images/speech.jpg" alt="Speech" style="max-width: 100%; height: auto;">
+<img src="https://raw.githubusercontent.com/ixxan/blog/refs/heads/master/images/speech.jpg" alt="Speech" style="max-width: 100%; height: auto;">
 
 
 ## Intro
