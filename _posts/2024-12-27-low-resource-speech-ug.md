@@ -22,17 +22,17 @@ Thus, through this blog, I would like to:
 By addressing these topics, I hope to inspire further efforts in preserving linguistic diversity and advancing speech technologies that can support a wider range of languages.
 
 # Table of Contents
-1. [Speech Technology Fundamentals](#section-1)
+1. [Speech Technology Fundamentals](#speech-technology-fundamentals)
     * [Phonetics Basics](#phonetics-basics)
     * [Acoustics Basics](#acoustics-basics)
     * [Speech Applications](#speech-applications)
     * [Notable Architectures](#notable-architectures)
-2. [Low-Resource Language Speech Research](#section-2)
-3. [Uyghur Speech Technology](#section-3)
+2. [Low-Resource Language Speech Research](#low-resource-language-speech-research)
+3. [Uyghur Speech Technology](#uyghur-speech-technology)
 4. [References](#references)
 
 # Speech Technology Fundamentals
-<a id="section-1"></a>
+<a id="speech-technology-fundamentals"></a>
 Speech technology has evolved significantly in the past decade, enabling devices to understand and generate human speech. To fully appreciate these advancements, it’s important to understand the fundamentals of speech systems.
 
 ## Phonetics Basics
@@ -133,11 +133,11 @@ Popular Seq2Seq-based TTS models: [SpeechT5](https://github.com/microsoft/Speech
 *The encoder-decoder structure shown in [OpenAI Whisper blog](https://openai.com/index/whisper/)*
 
 ## Low-Resource Language Speech Research
-<a id="section-2"></a>
+<a id="low-resource-language-speech-research"></a>
 ABC
 
 ## Uyghur Speech Technology
-<a id="section-3"></a>
+<a id="uyghur-speech-technology"></a>
 ABC
 
 ## Reference
