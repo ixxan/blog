@@ -23,23 +23,23 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 
 # Table of Contents
 1. [Speech Technology Fundamentals](#speech-technology-fundamentals)
-    * [Phonetics Basics](#phonetics-basics)
-    * [Acoustics Basics](#acoustics-basics)
-    * [Speech Applications](#speech-applications)
-    * [Notable Architectures](#notable-architectures)
+    1. [Phonetics Basics](#phonetics-basics)
+    2. [Acoustics Basics](#acoustics-basics)
+    3. [Speech Applications](#speech-applications)
+    4. [Notable Architectures](#notable-architectures)
 2. [Low-Resource Language Speech Research](#low-resource-language-speech-research) 
 3. [Uyghur Speech Technology](#uyghur-speech-technology)
-    * [Brief History of Uyghur Language and Speech Technology](#brief-history-of-uyghur-language-and-speech-technology)
-    * [Open Source Uyghur Speech Datasets](#open-source-uyghur-speech-datasets)
-    * [Open Source Uyghur Speech Models](#open-source-uyghur-speech-models)
-    * [Additional Tools](#additional-tools)
+    1. [Brief History of Uyghur Language and Speech Technology](#brief-history-of-uyghur-language-and-speech-technology)
+    2. [Open Source Uyghur Speech Datasets](#open-source-uyghur-speech-datasets)
+    3. [Open Source Uyghur Speech Models](#open-source-uyghur-speech-models)
+    4. [Additional Tools](#additional-tools)
 4. [References](#references)
 
-# Speech Technology Fundamentals
+# 1. Speech Technology Fundamentals
 <a id="speech-technology-fundamentals"></a>
 Speech technology has evolved significantly in the past decade, enabling devices to understand and generate human speech. To fully appreciate these advancements, it’s important to understand the fundamentals of speech systems.
 
-## Phonetics Basics
+## 1.1 Phonetics Basics
 <a id="phonetics-basics"></a>
 Phonetics studies the sounds in human speech, vital for converting between written text and spoken language.
 
@@ -55,7 +55,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 
 *The 44 phonemes of Standard English based on [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).*
 
-## Acoustics Basics
+## 1.2. Acoustics Basics
 <a id="acoustics-basics"></a>
 
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
