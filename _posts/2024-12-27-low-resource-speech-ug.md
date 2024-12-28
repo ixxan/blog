@@ -134,7 +134,30 @@ Popular Seq2Seq-based TTS models: [SpeechT5](https://github.com/microsoft/Speech
 
 ## Low-Resource Language Speech Research
 <a id="low-resource-language-speech-research"></a>
-ABC
+
+**Low-resource languages** are languages with limited linguistic data resources, such as annotated text corpora or speech data, which are essential for building robust speech and language models. In recent years, efforts by various research groups and organizations have led to some significant progress in data creation and model development for low-resource languages.
+
+### Common Voice (2017)
+Common Voice is a crowdsourcing project initiated by Mozilla to create a diverse **open-source dataset** of human voice recordings. It encourages volunteers to contribute their voices in various languages, including many low-resource ones. Anyone can record themselves reading texts or validate recordings submitted by others in available languages. It also allows individuals to request new languages and assist in making them available. This community-driven effort has been crucial in expanding and diversifying the dataset. 
+
+The project is continually expanding, with new releases every three months. The latest release, **Common Voice Corpus 20.0**, includes over **22,000 hours** of validated recordings across **130+ languages** <a href="https://commonvoice.mozilla.org" style="text-decoration: none;" target="_blank" title="Visit Mozilla Common Voice for more info">[7]</a>.
+
+### CMU Wilderness (2019) 
+
+The CMU Wilderness Multilingual Speech dataset, developed by Carnegie Mellon University, provides aligned sentences and audio for over **700 languages**, focusing primarily on low-resource languages. The dataset was created by extracting audio from **New Testament** recordings and includes on average **20 hours of data per language**. Importantly, the data creation algorithms were **open-sourced**, enabling others to recreate the same datasets <a href="https://github.com/festvox/datasets-CMU_Wilderness" style="text-decoration: none;" target="_blank" title="Visit CMU Wilderness Github Repo for more info">[8]</a>. This extensive dataset has enabled researchers to investigate the effectiveness of various pre-trained speech models on low-resource languages. 
+
+### ASR2K (2022)
+
+The ASR2K project, also from Carnegie Mellon University, aimed to improve **automatic speech recognition** for **1,909 languages** by leveraging transfer learning and multilingual models. Their approach involves mapping the output of multilingual models trained on high-resource languages to the appropriate phonemes for the target language. ASR2K represents the first attempt to build a speech recognition pipeline for thousands of languages without requiring audio <a href="https://arxiv.org/abs/2209.02842" style="text-decoration: none;" target="_blank" title="Check out the ASR2K paper to learn more">[9]</a>.
+
+### Meta MMS (2023)
+
+In 2023, Meta introduced its Massively Multilingual Speech (MMS) project, which extended the capabilities of **automatic speech recognition** and **text-to-speech** systems to over **1,100 languages** and **language identification** to over **4,000 languages**.
+
+The project utilized **Wav2Vec 2.0 models (CTC-based)** trained on datasets created using self-supervised learning and data alignment techniques. These datasets include a labeled dataset (MMS-lab) covering 1,107 languages and an unlabeled dataset (MMS-unlab) covering 3,809 languages, both created from recordings of New Testaments similar to the CMU Wilderness dataset. Meta also **open-sourced** their data alignment algorithms, enabling others to replicate and build upon their work. <a href="https://github.com/facebookresearch/fairseq/tree/main/examples/mms" style="text-decoration: none;" target="_blank" title="Visit MMS Github Repo for more info">[10]</a>.
+
+Meta-MMS models outperformed some existing state-of-the-art models, including OpenAI's Whisper, with half the word error rate while covering 11 times more languages <a href="https://arxiv.org/abs/2305.13516" style="text-decoration: none;" target="_blank" title="Check out the MMS paper to learn more">[11]</a>. These models are not only some of the most comprehensive and high-performing in the field but are also open-sourced, allowing researchers and developers to fine-tune them for specific applications, paving the way for more inclusive and accessible speech technologies worldwide. Check out examples of how you may fine-tune some of these models for specific low-resource langague in the next section.
+
 
 ## Uyghur Speech Technology
 <a id="uyghur-speech-technology"></a>
