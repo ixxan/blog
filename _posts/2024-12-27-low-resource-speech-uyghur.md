@@ -12,7 +12,7 @@ Language is a fundamental part of human culture, shaping our identities, traditi
 
 
 
-In the past decade, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI-driven speech systems continue to evolve, the reliance on these limited language systems could deepen the digital divide, further marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
+In the past decade, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI systems continue to evolve, the reliance on speech technologies may increase, further deepening the digital divide and marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
 
 Thus, through this blog, I would like to:
 1. Offer a tutorial on the fundamentals of speech technology for those interested
@@ -30,8 +30,8 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 2. [Low-Resource Language Speech Research](#low-resource-language-speech-research) 
 3. [Uyghur Speech Technology](#uyghur-speech-technology)
     1. [Brief History of Uyghur Language and Speech Technology](#brief-history-of-uyghur-language-and-speech-technology)
-    2. [Open Source Uyghur Speech Datasets](#open-source-uyghur-speech-datasets)
-    3. [Open Source Uyghur Speech Models](#open-source-uyghur-speech-models)
+    2. [Uyghur Speech Datasets](#uyghur-speech-datasets)
+    3. [Uyghur Speech Models](#uyghur-speech-models)
     4. [Additional Tools](#additional-tools)
 4. [References](#references)
 
@@ -139,7 +139,7 @@ Popular Seq2Seq-based TTS models: [SpeechT5](https://github.com/microsoft/Speech
 # 2. Low-Resource Language Speech Research
 <a id="low-resource-language-speech-research"></a>
 
-**Low-resource languages** are languages with limited linguistic data resources, such as annotated text corpora or speech data, which are essential for building robust speech and language models. In recent years, efforts by various research groups and organizations have led to some significant progress in data creation and model development for low-resource languages.
+**Low-resource languages** are languages with limited linguistic data resources, such as annotated text corpora or speech recordings, which are essential for building robust speech and language models. In recent years, efforts by various research groups and organizations have led to some significant progress in data creation and model development for low-resource languages. Below are a few notable examples.
 
 ### Common Voice (2017)
 Common Voice is a crowdsourcing project initiated by Mozilla to create a diverse **open-source dataset** of human voice recordings. It encourages volunteers to contribute their voices in various languages, including many low-resource ones. Anyone can record themselves reading texts or validate recordings submitted by others in available languages. It also allows individuals to request new languages and assist in making them available. This community-driven effort has been crucial in expanding and diversifying the dataset. 
@@ -168,12 +168,13 @@ To see examples of fine-tuning these models for specific low-resource languages,
 # 3. Uyghur Speech Technology
 <a id="uyghur-speech-technology"></a>
 
+<img src="./../images/alphabet.jpg" alt="Alphabet" style="float: right; max-width: 30%; margin-left: 20px; margin-top: 20px; margin-bottom: 20px; height: auto;">
+
 Uyghur, spoken by over 13 million people worldwide—primarily in Central Asia—represents a rich cultural and linguistic heritage. It is closely related to Uzbek, both belonging to the **Karluk** branch of the **Turkic language family**, and shares significant similarities with other Turkic languages like Kazakh, Turkish, etc.
 
-Modern Uyghur has a unique alphabet with **32 letters**, including **8 vowels** and **24 consonants**. The language is primarily written using a modified **Perso-Arabic** script that marks all vowels, setting it apart from other languages that use similar scripts. Although less common, **Latin** and **Cyrillic** scripts are also used in various contexts. Like many Turkic languages, Uyghur features vowel harmony and agglutination and lacks noun classes or grammatical gender<a href="https://en.wikipedia.org/wiki/Uyghur_language" style="text-decoration: none;" target="_blank" title="Read more about Uyghur language here"><sup>12</sup></a>.
+Modern Uyghur has a unique alphabet with **32 letters**, including **8 vowels** and **24 consonants**. The language is primarily written using a modified **Perso-Arabic** script that marks all vowels, setting it apart from other languages that use similar scripts. **Latin** and **Cyrillic** scripts are also used in various contexts, but to a lesser extent. Like many Turkic languages, Uyghur features vowel harmony and agglutination and lacks noun classes or grammatical gender<a href="https://en.wikipedia.org/wiki/Uyghur_language" style="text-decoration: none;" target="_blank" title="Read more about Uyghur language here"><sup>12</sup></a>.
 
 Over the years, substantial progress has been made in advancing Uyghur speech technology, driven by the efforts of researchers, organizations, and individuals. This overview will provide a brief history of these developments, including references for readers interested in learning more, and present available datasets, models, implementation tutorials, and tools for those looking to contribute to this field. The ultimate goal is to inspire the creation of more applications aimed at preserving the Uyghur language and potentially provide insights that can benefit other low-resource languages.
-
 
 ## 3.1 Brief History of Uyghur Language and Speech Technology
 <a id="brief-history-of-uyghur-language-and-speech-technology"></a>
@@ -195,11 +196,11 @@ Over the years, substantial progress has been made in advancing Uyghur speech te
     * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25).  
     * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26).
 
-## 3.2 Open Source Uyghur Speech Datasets
-<a id="open-source-uyghur-speech-datasets"></a>
+## 3.2 Uyghur Speech Datasets
+<a id="uyghur-speech-datasets"></a>
 
-## 3.3 Open Source Uyghur Speech Models
-<a id="open-source-uyghur-speech-models"></a>
+## 3.3 Uyghur Speech Models
+<a id="uyghur-speech-models"></a>
 
 ## 3.4 Additional Tools 
 <a id="additional-tools"></a>
