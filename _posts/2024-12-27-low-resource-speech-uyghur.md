@@ -55,7 +55,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 
 *The 44 phonemes of Standard English based on [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).*
 
-## 1.2. Acoustics Basics
+## 1.2 Acoustics Basics
 <a id="acoustics-basics"></a>
 
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
@@ -73,7 +73,7 @@ Libraries like [librosa](https://librosa.org/doc/latest/index.html) and [pydub](
 
 *Comparison of Mel spectrograms for an audio clip saying "Hello World" at 16 kHz and 44.1 kHz sampling rates. Higher sampling rates capture more detailed information, as seen in the richer frequency representation at 44.1 kHz.*
 
-## Speech Applications
+## 1.3 Speech Applications
 <a id="speech-applications"></a>
 Speech technology encompasses a broad range of applications that facilitate various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
 
@@ -87,7 +87,7 @@ Some other common speech technology tasks include:
 * **Speaker Diarization**: Identifying the speaker at any given moment in an audio clip.
 * **Keyword Detection**: Detecting specific words or phrases in continuous speech, often used for wake-word detection in voice assistants.
 
-## Notable Architectures
+## 1.4 Notable Architectures
 <a id="notable-architectures"></a>
 There have been various architectures proposed for various speech tasks throughout the years. Here I would discuss 2 popular types. 
 
@@ -136,25 +136,25 @@ Popular Seq2Seq-based TTS models: [SpeechT5](https://github.com/microsoft/Speech
 
 *The encoder-decoder structure shown in [OpenAI Whisper blog](https://openai.com/index/whisper/)*
 
-# Low-Resource Language Speech Research
+# 2. Low-Resource Language Speech Research
 <a id="low-resource-language-speech-research"></a>
 
 **Low-resource languages** are languages with limited linguistic data resources, such as annotated text corpora or speech data, which are essential for building robust speech and language models. In recent years, efforts by various research groups and organizations have led to some significant progress in data creation and model development for low-resource languages.
 
-## Common Voice (2017)
+### Common Voice (2017)
 Common Voice is a crowdsourcing project initiated by Mozilla to create a diverse **open-source dataset** of human voice recordings. It encourages volunteers to contribute their voices in various languages, including many low-resource ones. Anyone can record themselves reading texts or validate recordings submitted by others in available languages. It also allows individuals to request new languages and assist in making them available. This community-driven effort has been crucial in expanding and diversifying the dataset. 
 
 The project is continually expanding, with new releases every three months. The latest release, **Common Voice Corpus 20.0**, includes over **22,000 hours** of validated recordings across **130+ languages**<a href="https://commonvoice.mozilla.org" style="text-decoration: none;" target="_blank" title="Visit Mozilla Common Voice for more info"><sup>7</sup></a>.
 
-## CMU Wilderness (2019) 
+### CMU Wilderness (2019) 
 
 The CMU Wilderness Multilingual Speech dataset, developed by Carnegie Mellon University, provides aligned sentences and audio for over **700 languages**, focusing primarily on low-resource languages. The dataset was created by extracting audio from **New Testament** recordings and includes on average **20 hours of data per language**. Importantly, the data creation algorithms were **open-sourced**, enabling others to recreate the same datasets<a href="https://github.com/festvox/datasets-CMU_Wilderness" style="text-decoration: none;" target="_blank" title="Visit CMU Wilderness Github Repo for more info"><sup>8</sup></a>. This extensive dataset has enabled researchers to investigate the effectiveness of various pre-trained speech models on low-resource languages. 
 
-## ASR2K (2022)
+### ASR2K (2022)
 
 The ASR2K project, also from Carnegie Mellon University, aimed to improve **automatic speech recognition** for **1,909 languages** by leveraging transfer learning and multilingual models. Their approach involves mapping the output of multilingual models trained on high-resource languages to the appropriate phonemes for the target language. ASR2K represents the first attempt to build a speech recognition pipeline for thousands of languages without requiring audio<a href="https://arxiv.org/abs/2209.02842" style="text-decoration: none;" target="_blank" title="Check out the ASR2K paper to learn more"><sup>9</sup></a>.
 
-## Meta MMS (2023)
+### Meta MMS (2023)
 
 In 2023, Meta introduced its Massively Multilingual Speech (MMS) project, which extended the capabilities of **automatic speech recognition** and **text-to-speech** systems to over **1,100 languages** and **language identification** to over **4,000 languages**.
 
@@ -165,7 +165,7 @@ Meta-MMS models outperformed some existing state-of-the-art models, including Op
 To see examples of fine-tuning these models for specific low-resource languages, continue to the next section.
 
 
-# Uyghur Speech Technology
+# 3. Uyghur Speech Technology
 <a id="uyghur-speech-technology"></a>
 
 Uyghur, spoken by over 13 million people worldwide—primarily in Central Asia—represents a rich cultural and linguistic heritage. It is closely related to Uzbek, both belonging to the **Karluk** branch of the **Turkic language family**, and shares significant similarities with other Turkic languages like Kazakh, Turkish, etc.
@@ -175,7 +175,7 @@ Modern Uyghur has a unique alphabet with **32 letters**, including **8 vowels** 
 Over the years, substantial progress has been made in advancing Uyghur speech technology, driven by the efforts of researchers, organizations, and individuals. This overview will provide a brief history of these developments, including references for readers interested in learning more, and present available datasets, models, implementation tutorials, and tools for those looking to contribute to this field. The ultimate goal is to inspire the creation of more applications aimed at preserving the Uyghur language and potentially provide insights that can benefit other low-resource languages.
 
 
-## Brief History of Uyghur Language and Speech Technology
+## 3.1 Brief History of Uyghur Language and Speech Technology
 <a id="brief-history-of-uyghur-language-and-speech-technology"></a>
 
 * **1994**: The Uyghur alphabet was incorporated into the international Unicode encoding standard[<sup>13</sup>](#13).
@@ -195,16 +195,16 @@ Over the years, substantial progress has been made in advancing Uyghur speech te
     * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25).  
     * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26).
 
-## Open Source Uyghur Speech Datasets
+## 3.2 Open Source Uyghur Speech Datasets
 <a id="open-source-uyghur-speech-datasets"></a>
 
-## Open Source Uyghur Speech Models
+## 3.3 Open Source Uyghur Speech Models
 <a id="open-source-uyghur-speech-models"></a>
 
-## Additional Tools 
+## 3.4 Additional Tools 
 <a id="additional-tools"></a>
 
-# Reference
+# 4. Reference
 <a id="references"></a>
 
 <a id="1"></a>1. Ethnologue. *Languages of the World*.
