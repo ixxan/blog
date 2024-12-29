@@ -17,7 +17,7 @@ In the past decade, speech technologies integrated into smartphones and other pe
 Thus, through this blog, I would like to:
 1. Offer a tutorial on the fundamentals of speech technology for those interested
 2. Explore recent advancements in speech technology research for low-resource languages
-3. Share valuable resources and highlight specific implementations in my native language, Uyghur
+3. Share some valuable resources and my implementations for my native language, Uyghur
 
 By addressing these topics, I hope to inspire further efforts in preserving linguistic diversity and advancing speech technologies that can support a wider range of languages.
 
@@ -219,7 +219,7 @@ The UQSpeechDataset features recordings of **single-speaker** making it highly s
 ## 3.3 Available Uyghur Speech Models
 <a id="available-uyghur-speech-models"></a>
 
-Several publicly available Uyghur speech models exist, however, they are usually part of a larger model not specifically trained for Uyghur. Thus, I also fine-tuned some of them with the datasets mentioned earlier. I released the fine-tuning code for others to reference in my [GitHub repository](https://github.com/ixxan/ug-speech).
+Several publicly available Uyghur speech models exist, however, they are usually part of a larger model not specifically trained for Uyghur. Thus, I fine-tuned some of them with the datasets mentioned earlier. I also released the fine-tuning code for others to reference in my [GitHub repository](https://github.com/ixxan/ug-speech).
 
 You can explore the results from all the models in my HuggingFace [demo](https://huggingface.co/spaces/ixxan/uyghur-speech-models), as well as trying this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
