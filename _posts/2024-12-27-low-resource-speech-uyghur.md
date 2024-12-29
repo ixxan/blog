@@ -224,9 +224,9 @@ Two other noteworthy datasets include **single-speaker** readings of the **New T
 ## 3.3 Available Uyghur Speech Models
 <a id="available-uyghur-speech-models"></a>
 
-Several publicly available Uyghur speech models exist, and I have fine-tuned some of them with the datasets mentioned earlier. I’ve also released the fine-tuning code for others to reference on [GitHub](https://github.com/ixxan/ug-speech).
+Several publicly available Uyghur speech models exist, however, they are usually part of a larger model not specifically trained for Uyghur. Thus, I also fine-tuned some of them with the datasets mentioned earlier. I released the fine-tuning code for others to reference in my [GitHub repository](https://github.com/ixxan/ug-speech).
 
-You can explore the results in my [demo](https://huggingface.co/spaces/ixxan/uyghur-speech-models) comparing these models, as well as a [pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) created using some of them.
+You can explore the results from all the models in my HuggingFace [demo](https://huggingface.co/spaces/ixxan/uyghur-speech-models), as well as trying this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
 ### TurkicTTS
 Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model utilizes the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. Pre-trained models and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS).
