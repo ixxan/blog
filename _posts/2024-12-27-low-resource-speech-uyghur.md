@@ -72,7 +72,7 @@ Libraries like [librosa](https://librosa.org/doc/latest/index.html) and [pydub](
 
 ## 1.3 Speech Applications <a id="speech-applications"></a>
 
-Speech technology encompasses a broad range of applications that facilitate various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
+Speech technology encompasses a broad range of applications that support various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
 
 **Automatic Speech Recognition (ASR)**, also known as **Speech-to-Text (SST)**, converts human speech into written text. ASR at the foundation of numerous technologies, such as virtual assistants, transcription services, real-time translation systems, and accessibility tools. To build a reliable ASR system, large datasets of transcribed speech, covering diverse speech patterns, accents, and languages, are essential. Its performance is typically evaluated using metrics like **Word Error Rate (WER)** or **Character Error Rate (CER)** on datasets such as [FLEURS](https://huggingface.co/datasets/google/fleurs) (a widely recognized benchmark for multilingual ASR, covering 102 languages)<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>4</sup></a>.
 
