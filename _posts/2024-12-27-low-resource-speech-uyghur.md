@@ -12,7 +12,7 @@ Language is a cornerstone of human culture, shaping our identities, traditions, 
 
 
 
-In today's digital age, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI continue to advance, the reliance on speech technologies may grow, further deepening the digital divide and marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
+In today's digital age, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI continues to advance, the reliance on speech technologies may grow, further deepening the digital divide and marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
 
 Thus, through this article, I would like to:
 1. Offer a tutorial on the fundamentals of speech technology for those interested
