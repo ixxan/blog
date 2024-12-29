@@ -30,8 +30,8 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
 2. [Low-Resource Language Speech Research](#low-resource-language-speech-research) 
 3. [Uyghur Speech Technology](#uyghur-speech-technology)
     1. [Brief History of Uyghur Language and Speech Technology](#brief-history-of-uyghur-language-and-speech-technology)
-    2. [Uyghur Speech Datasets](#uyghur-speech-datasets)
-    3. [Uyghur Speech Models](#uyghur-speech-models)
+    2. [Available Uyghur Speech Datasets](#available-uyghur-speech-datasets)
+    3. [Available Uyghur Speech Models](#available-uyghur-speech-models)
     4. [Additional Tools](#additional-tools)
 4. [References](#references)
 
@@ -196,11 +196,57 @@ Over the years, substantial progress has been made in advancing Uyghur speech te
     * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25)
     * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26)
 
-## 3.2 Uyghur Speech Datasets
-<a id="uyghur-speech-datasets"></a>
+## 3.2 Available Uyghur Speech Datasets
+<a id="available-uyghur-speech-datasets"></a>
 
-## 3.3 Uyghur Speech Models
-<a id="uyghur-speech-models"></a>
+### THUYG20
+The THUYG20 Dataset, published in 2017 by researchers from Tsinghua University and Xinjiang University, is widely recognized as a **benchmark** for Uyghur speech models. It includes **20 hours of training** speech and **1 hour of test** speech from native Uyghur speakers. Additionally, the dataset includes valuable supplementary resources such as THUYG20-SRE for speaker recognition and a phoneme dictionary. These datasets can be downloaded directly from [here](https://openslr.org/22).
+
+One limitation of the THUYG20 however is its use of non-standard Uyghur scripts. But thanks to Mr. Gheyret Kenji, the transcriptions are corrected in both Uyghur-Arabic and Uyghur-Latin scripts and can be downloaded from his GitHub [repository](https://github.com/gheyret/thuyg20_scripts).
+
+### M2ASR
+The M2ASR project is a large-scale initiative to advance speech recognition technologies for five minority languages: Uyghur, Tibetan, Mongolian, Kazakh, and Kyrgyz. For Uyghur, the project provides **136 hours** of speech data, transcripts, and a pronunciation dictionary. While these resources were publicly released in 2021, to access this dataset, one must email the research group for permission: [M2ASR Details](http://index.cslt.org/mediawiki/index.php/ASR-nsfc-data).
+
+### Common Voice
+The Common Voice dataset, as highlighted earlier, is rapidly expanding across hundreds of languages, thanks to the contributions of volunteers worldwide. Over the past two years, the Uyghur community has made significant strides towards a goal of reaching 1,000 hours of speech data for Uyghur. The latest release, Common Voice Corpus 20.0, now includes over **350 hours** of validated Uyghur audio, making it one of the largest and most diverse collections of Uyghur speech data available. 
+
+To any Uyghur speakers reading this: **please contribute**! By dedicating just a few minutes of your time daily, you can play a vital role in advancing Uyghur speech technology.  It’s also a great way to practice reading Uyghur, especially for those who may not have had the chance to receive formal education in the language. To contribute or download the dataset, please visit [here](https://commonvoice.mozilla.org).
+
+### UQSpeechDataset
+The UQSpeechDataset features recordings of **single-speaker** making it highly suitable for Text-to-Speech (TTS) training. Created by Mr. Gheyret Kenji and other Uyghur scholars, this dataset consists of audio translations of the **Noble Quran** in Uyghur, segmented into 10-second clips, with transcripts provided in Uyghur Arabic, Latin, and Cyrillic scripts. This dataset is publicly avaiable in this [repository](https://github.com/gheyret/UQSpeechDataset).
+
+### Biblical Recordings
+Two other noteworthy datasets include **single-speaker** readings of the **New Testament** from the CMU Wilderness and Meta MMS projects. These datasets, derived from recordings available on bible.is, are broken into short clips with corresponding transcripts using alignment techniques. Both research groups have open-sourced their alignment algorithms, enabling users to recreate the datasets. To access these, one may visit:
+* [CMU Wilderness](https://github.com/festvox/datasets-CMU_Wilderness)
+* [Meta MMS](https://github.com/facebookresearch/fairseq/tree/main/examples/mms/data_prep)
+
+
+## 3.3 Available Uyghur Speech Models
+<a id="available-uyghur-speech-models"></a>
+
+Several publicly available Uyghur speech models exist, and I have fine-tuned some of them with the datasets mentioned earlier. I’ve also released the fine-tuning code for others to reference on [GitHub](https://github.com/ixxan/ug-speech).
+
+You can explore the results in my [demo](https://huggingface.co/spaces/ixxan/uyghur-speech-models) comparing these models, as well as a [pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) created using some of them.
+
+### TurkicTTS
+Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model utilizes the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. Pre-trained models and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS).
+
+### Meta MMS
+As previously mentioned, Meta’s Massively Multilingual Speech project includes Uyghur **Automatic Speech Recognition (ASR)**, **Text-to-Speech (TTS)**, and **language identification (LID)** models trained from single-speaker biblical recording data. You can try these models in this HuggingFace [demo](https://huggingface.co/spaces/mms-meta/MMS) or use their checkpoints from the following sources: 
+* [ASR](https://huggingface.co/facebook/mms-1b-all) 
+* [TTS](https://huggingface.co/facebook/mms-tts-uig-script_arabic) 
+* [LID](https://huggingface.co/facebook/mms-lid-1024)
+
+To improve the accuracy of these models, I fine-tuned the ASR model using a combination of THUYG20, Common Voice, and UQSpeechDataset (over 74 hours of training speech), and fine-tuned the TTS model using UQSpeechDataset. My models are available for inference:
+* [ASR](https://huggingface.co/ixxan/wav2vec2-large-mms-1b-uyghur-latin)
+* [TTS](https://huggingface.co/ixxan/mms-tts-uig-script_arabic-UQSpeech)
+
+### OpenAI Whisper
+While OpenAI’s Whisper model is not available in Uyghur, it is available for Uzbek. I fine-tuned the Uzbek whisper-small model for Uyghur using approximately 20 hours of training speech from Common Voice and the THUYG20 dataset. This resulted in a 10.9% CER on Common Voice and 4.9% CER on THUYG20. My models are available for inference:
+* [Whisper-Small-Uyghur-Common-Voice](https://huggingface.co/ixxan/whisper-small-uyghur-common-voice)
+* [Whisper-Small-Uyghur-THUGY20](https://huggingface.co/ixxan/whisper-small-uyghur-thugy20)
+
+
 
 ## 3.4 Additional Tools 
 <a id="additional-tools"></a>
