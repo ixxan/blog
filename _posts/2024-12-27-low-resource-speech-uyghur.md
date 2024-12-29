@@ -35,12 +35,10 @@ By addressing these topics, I hope to inspire further efforts in preserving ling
     4. [Additional Tools](#additional-tools)
 4. [References](#references)
 
-# 1. Speech Technology Fundamentals
-<a id="speech-technology-fundamentals"></a>
+# 1. Speech Technology Fundamentals <a id="speech-technology-fundamentals"></a>
 Speech technology has evolved significantly in the past decade, enabling devices to recognize and generate human speech. To fully appreciate these advancements, it’s important to understand the fundamentals of speech systems.
 
-## 1.1 Phonetics Basics
-<a id="phonetics-basics"></a>
+## 1.1 Phonetics Basics <a id="phonetics-basics"></a>
 Phonetics studies the sounds in human speech, vital for converting between written text and spoken language.
 
 A **grapheme** is the smallest unit of a writing system that represents a sound or a meaningful unit of language. For example, in English, the letter “b” is a grapheme representing the /b/ sound. 
@@ -63,7 +61,7 @@ Acoustics studies how waves travel through media like air or water, crucial for 
 
 Speech production begins with our vocal folds creating a basic sound when air passes through them. However, before the sound exits the mouth, it travels through the vocal tract (throat, mouth, and nose), which shapes and modifies it. These modifications produce **formants**—resonant frequencies essential for distinguishing sounds in a language, especially vowels<a href="http://www.voicescienceworks.org/harmonics-vs-formants.html" style="text-decoration: none;" target="_blank" title="Visit Voice Science Works for more info"><sup>2</sup></a>.
 
-To analyze these acoustic properties, we use tools like the spectrogram. A **spectrogram** is a visual representation of the spectrum of frequencies in a sound signal over time. It shows how the frequency content of an audio signal changes, allowing us to visualize speech as a sequence of sounds. The **Mel spectrogram** is a variation that uses the Mel scale, which aligns more closely with human hearing. The Mel scale compresses high-frequency components, where our hearing is less sensitive, and expands low-frequency components, where we are more sensitive. Mel spectrograms are widely used as input features for speech models<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>3</sup></a>.
+To analyze these acoustic properties, we use methods like the spectrogram. A **spectrogram** is a visual representation of the frequency spectrum in a sound signal over time. It plots how the frequency content of an audio signal changes, allowing us to visualize speech as a sequence of sounds. The **Mel spectrogram** is a variation that uses the Mel scale, which aligns more closely with human hearing. The Mel scale compresses high-frequency components, where our hearing is less sensitive, and expands low-frequency components, where we are more sensitive. Mel spectrograms are widely used as input features for speech models<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>3</sup></a>.
 
 The effectiveness of spectrograms depends on the **sampling rate**—the number of times per second an audio signal is sampled during digitization. A higher sampling rate provides more detail, capturing a clearer representation of the sound. However, higher sampling rates also require more computational power and storage. For speech processing, **16 kHz** is commonly used, as it captures frequencies up to 8 kHz, covering most of the important information in human speech. For music, a higher sampling rate like **44.1 kHz** is standard, capturing frequencies up to 22.05 kHz, the upper limit of human hearing.
 
