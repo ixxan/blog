@@ -215,6 +215,10 @@ Several publicly available Uyghur speech models exist, however, they are typical
 
 Additionally, the results from all the models are demonstrated in my [HuggingFace space](https://huggingface.co/spaces/ixxan/uyghur-speech-models), along with this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
+<img src="./../images/demo.png" alt="Demo" style="max-width: 100%; height: auto;">
+
+*An [Uyghur Pronunciation Checker](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) application created using fine-tuned ASR and TTS models on HuggingFace Space*
+
 ### TurkicTTS
 Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model uses the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. The pre-trained TurkicTTS model and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS) for download and inference.
 
