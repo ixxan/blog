@@ -86,32 +86,32 @@ Some other common speech technology tasks include:
 
 ## 1.4 Notable Architectures <a id="notable-architectures"></a>
 
-There have been various architectures proposed for various speech tasks throughout the years. Here I would discuss 2 popular types. 
+Over the years, various architectures have been proposed for different speech tasks. Here, I will discuss two popular types.
 
-### 1.4.1 Traditional Approach: Hidden Markov Models (HMM)
-Hidden Markov Models (HMMs) were the foundation of many early ASR and TTS systems before the rise of deep learning-based models. They model speech as sequences of phonemes with probabilities for transitions and observations. 
+### 1.4.1 Traditional Approach: Hidden Markov Models (HMMs)
+Hidden Markov Models (HMMs) were the foundation of many early ASR and TTS systems before the rise of deep learning-based models. HMMs model speech as sequences of phonemes, with probabilities for transitions and observations.
 
-To better understand it, let’s try to recognize the word “hello” from a speech signal using HMMs. Here’s our set up:
-* **Hidden States (Phonetic Features)**: represent the phonemes. (e.g., /h/, /e/, /l/, /o/ for “hello”).
+To better understand how HMMs work, let’s recognize the word “hello” from a speech signal using HMMs. Here’s the setup:
+* **Hidden States (Phonetic Features)**: represent the phonemes. (e.g., /h/, /e/, /l/, /o/).
 * **Observations (Acoustic Features)**: the actual audio features that we can measure, such as frequency or amplitude. (e.g., we observe the distinct frequency for /e/).
-* **Transition Probabilities**: Likelihood of moving between states (e.g., 0.7 for /h/ → /e/).
-* **Emission Probabilities**: Likelihood of audio features given a current state. (e.g., 0.8 for frequency around 1800 Hz given /e/).
+* **Transition Probabilities**: the likelihood of moving between states (e.g., 0.7 for /h/ → /e/).
+* **Emission Probabilities**: the likelihood of audio features given a current state. (e.g., 0.8 for frequency around 1800 Hz given /e/).
 
 Now to walk through the recognizing process: 
-1. We start with an initial probability for the first state. For example, we might say the probability of starting with the phoneme /h/ is 1 (since we know the word starts with “h”).
-2. The model then transitions from state to state based on the transition probabilities. For example, after hearing /h/, it is likely to transition to /e/.
-3. For each state (phoneme), we generate an observation based on the emission probabilities. For example, in state /h/, the observation might be a burst of air.
-4. Finally, after processing the sequence of phonemes (states) and their corresponding observations, the model uses the transition and emission probabilities to determine the most likely sequence of phonemes that led to the observed acoustic features, which may led to /h/, /e/, /l/, /l/, /o/, or “hello.”
+1. We start with an initial probability for the first state. For example, we may set the probability of starting with the phoneme /h/ is 1 (since we know the word starts with “h”).
+2. The model then transitions from state to state based on the transition probabilities. For example, after hearing /h/, it is the most likely to transition to /e/.
+3. For each state, we also generate an observation based on the emission probabilities. For example, in state /h/, the observation may be audio signal for a burst of air.
+4. Finally, after processing the sequence of states and their corresponding observations, the model uses the transition and emission probabilities to determine the most likely sequence of phonemes that led to the observed acoustic features, which may led to /h/, /e/, /l/, /l/, /o/, or “hello.”
 
 
 ### 1.4.2 Modern Approach: End-to-End (E2E)
-With the rise of deep learning methods in ML since the 2010s, researchers have achieved significant success with deep learning-based speech models, particularly End-to-End (E2E) architectures. E2E architectures eliminate the need for hand-crafted features and separate language and acoustic models by integrating both into a single neural network. Two common E2E structures are based on Connectionist Temporal Classification (CTC) loss functions and Sequence-to-Sequence (Seq2Seq) modeling. Below is how the word “hello” can be recognized using each approach:
+With the rise of deep learning methods in ML since the 2010s, researchers have achieved significant success with deep learning-based speech models, particularly End-to-End (E2E) architectures. E2E models eliminate the need for hand-crafted features or separated language and acoustic models by integrating both into a single neural network. Two common E2E structures are based on Connectionist Temporal Classification (CTC) loss functions and Sequence-to-Sequence (Seq2Seq) modeling. Below is how the word “hello” can be recognized using each approach:
 
 **CTC (Connectionist Temporal Classification)**: Encoder-only structure<a href="https://distill.pub/2017/ctc/" style="text-decoration: none;" target="_blank" title="Check out this tutorial to learn more"><sup>5</sup></a>
 1. **Encoder**: The model processes the audio, breaking it into small frames (e.g., 20 milliseconds) and creates a hidden state for each frame.
-2. **Vocabulary**: For each hidden state, the model predicts a label, such as a character or phoneme. (e.g., “HHEEE”, is predicted from the first 5 frames)
-3. **Blank Token**: Since the model doesn’t know the exact timing of words, it uses a blank token (_) to skip over uncertain regions of the audio.
-4. **Post-processing**: After the model makes predictions, repeated labels and blanks are cleaned up (e.g., “HHEEE_ELLL_OO” becomes “HELLO”).
+2. **Vocabulary**: For each hidden state, the model predicts a label, such as a character or phoneme. (e.g., “HEE”, is predicted from the first 3 frames)
+3. **Blank Token**: Since the model doesn’t know the exact timing of words, it may also use a blank token (_) to skip over uncertain regions of the audio.
+4. **Post-processing**: After the model makes predictions, repeated labels and blanks are cleaned up (e.g., “HEE_L_LL_OO” becomes “HELLO”).
 
 Popular CTC-based ASR Models: [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2), [HuBERT](https://huggingface.co/docs/transformers/en/model_doc/hubert), [M-CTC-T](https://huggingface.co/docs/transformers/en/model_doc/mctct).
 
@@ -120,10 +120,10 @@ Popular CTC-based ASR Models: [Wav2Vec](https://huggingface.co/docs/transformers
 *Demo of how CTC algorithm recognizes "hello" from input audio by [Awni Hannun](https://distill.pub/2017/ctc/)*
 
 **Seq2Seq (Sequence-to-Sequence)**: Encoder-Decoder structure<a href="https://huggingface.co/learn/audio-course/en/chapter3/seq2seq" style="text-decoration: none;" target="_blank" title="Check out this tutorial to learn more"><sup>6</sup></a>
-1. **Encoder**: The model listens to an audio clip (e.g., “hello”) and transforms it into a sequence of features (e.g., spectrogram). The encoder processes these features to capture key information about the speech.
-2. **Decoder**: The decoder uses the encoded information to generate the output sequence. It starts with a “start” token and predicts the next word or character (e.g., “H” for “hello”), adding each prediction to the growing output.
+1. **Encoder**: The model listens to an audio clip (e.g., “hello”) and transforms it into a sequence of features (e.g., mel spectrogram). The encoder processes these features to capture key information about the speech.
+2. **Decoder**: The decoder uses the encoded information to generate the output sequence. It starts with a “start” token and predicts the next word or character (e.g., “h” for “hello”), adding each prediction to the growing output.
 3. **Cross-Attention**: The decoder uses the encoder’s hidden states to focus on relevant parts of the input when predicting subsequent tokens.
-4. **Autoregressive Generation**: The decoder generates one token at a time, using the previous token to predict the next. For example, after predicting “H,” it uses that to predict “E,” and so on, until it finishes with ‘HELLO’
+4. **Autoregressive Generation**: The decoder generates one token at a time, using the previous token to predict the next. For example, after predicting “h,” it uses that to predict “e,” and so on, until it finishes with "hello."
 
 Popular Seq2Seq-based ASR models: [Whisper](https://openai.com/index/whisper/)
 
