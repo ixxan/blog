@@ -168,7 +168,7 @@ To see examples of fine-tuning these models for specific low-resource languages,
 # 3. Uyghur Speech Technology
 <a id="uyghur-speech-technology"></a>
 
-<img src="./../images/alphabet.jpg" alt="Alphabet" style="float: right; max-width: 30%; margin-left: 20px; margin-top: 20px; margin-bottom: 20px; height: auto;">
+<img src="./../images/alphabet.png" alt="Alphabet" style="float: right; max-width: 30%; margin-left: 20px; margin-top: 20px; margin-bottom: 20px; height: auto;">
 
 Uyghur, spoken by over 13 million people worldwide—primarily in Central Asia—represents a rich cultural and linguistic heritage. It is closely related to Uzbek, both belonging to the **Karluk** branch of the **Turkic language family**, and shares significant similarities with other Turkic languages like Kazakh, Turkish, etc.
 
