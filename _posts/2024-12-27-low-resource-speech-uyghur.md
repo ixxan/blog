@@ -8,13 +8,13 @@ categories: media
 
 <img src="./../images/speech.jpg" alt="speech" style="max-width: 100%; height: auto;">
 
-Language is a fundamental part of human culture, shaping our identities, traditions, and ways of thinking. With over 7,000 languages spoken globally, it's concerning that nearly half are endangered<a href="https://www.ethnologue.com" style="text-decoration: none;" target="_blank" title="Visit Ethnologue for more info"><sup>1</sup></a>.
+Language is a cornerstone of human culture, shaping our identities, traditions, and ways of thinking. With over 7,000 languages spoken globally, it's alarming that nearly half are endangered<a href="https://www.ethnologue.com" style="text-decoration: none;" target="_blank" title="Visit Ethnologue for more info"><sup>1</sup></a>. When a language disappears, its speakers lose a vital connection to their heritage and history. The world also loses unique perspectives, cultural knowledge, and valuable insights into human behavior and ways of life.
 
 
 
-In the past decade, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI systems continue to evolve, the reliance on speech technologies may increase, further deepening the digital divide and marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
+In today's digital age, speech technologies integrated into smartphones and other personal devices have become essential to our daily lives. However, these systems only support a handful of languages. As AI continue to advance, the reliance on speech technologies may grow, further deepening the digital divide and marginalizing underrepresented languages. This is especially concerning for younger generations in minority communities. While immersed in technology from an early age, children may primarily interact with dominant languages, even as families work to preserve their native tongues.
 
-Thus, through this blog, I would like to:
+Thus, through this article, I would like to:
 1. Offer a tutorial on the fundamentals of speech technology for those interested
 2. Explore recent advancements in speech technology research for low-resource languages
 3. Share some valuable resources and my implementations for my native language, Uyghur
