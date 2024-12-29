@@ -215,11 +215,6 @@ To any Uyghur speakers reading this: **please contribute**! By dedicating just a
 ### UQSpeechDataset
 The UQSpeechDataset features recordings of **single-speaker** making it highly suitable for Text-to-Speech (TTS) training. Created by Mr. Gheyret Kenji and other Uyghur scholars, this dataset consists of audio translations of the **Noble Quran** in Uyghur, segmented into 10-second clips, with transcripts provided in Uyghur Arabic, Latin, and Cyrillic scripts. This dataset is publicly avaiable in this [repository](https://github.com/gheyret/UQSpeechDataset).
 
-### Biblical Recordings
-Two other noteworthy datasets include **single-speaker** readings of the **New Testament** from the CMU Wilderness and Meta MMS projects. These datasets, derived from recordings available on bible.is, are broken into short clips with corresponding transcripts using alignment techniques. Both research groups have open-sourced their alignment algorithms, enabling users to recreate the datasets. To access these, one may visit:
-* [CMU Wilderness](https://github.com/festvox/datasets-CMU_Wilderness)
-* [Meta MMS](https://github.com/facebookresearch/fairseq/tree/main/examples/mms/data_prep)
-
 
 ## 3.3 Available Uyghur Speech Models
 <a id="available-uyghur-speech-models"></a>
@@ -229,7 +224,7 @@ Several publicly available Uyghur speech models exist, however, they are usually
 You can explore the results from all the models in my HuggingFace [demo](https://huggingface.co/spaces/ixxan/uyghur-speech-models), as well as trying this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
 ### TurkicTTS
-Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model utilizes the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. Pre-trained models and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS).
+Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model utilizes the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. The pre-trained TurkicTTS model and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS).
 
 ### Meta MMS
 As previously mentioned, Meta’s Massively Multilingual Speech project includes Uyghur **Automatic Speech Recognition (ASR)**, **Text-to-Speech (TTS)**, and **language identification (LID)** models trained from single-speaker biblical recording data. You can try these models in this HuggingFace [demo](https://huggingface.co/spaces/mms-meta/MMS) or use their checkpoints from the following sources: 
@@ -246,10 +241,15 @@ While OpenAI’s Whisper model is not available in Uyghur, it is available for U
 * [Whisper-Small-Uyghur-Common-Voice](https://huggingface.co/ixxan/whisper-small-uyghur-common-voice)
 * [Whisper-Small-Uyghur-THUGY20](https://huggingface.co/ixxan/whisper-small-uyghur-thugy20)
 
-
-
 ## 3.4 Additional Tools 
 <a id="additional-tools"></a>
+Here are some additional tools I found helpful for those who are interested in working on Uyghur speech projects:
+
+* [Uyghur Script Converter](https://github.com/neouyghur/Uyghur-Multi-Script-Converter/tree/master): An Uyghur script converter library created by Dr. Osman Tursun to help easily convert Uyghur texts across various Uyghur scripts.
+* [Epitran](https://github.com/dmort27/epitran): A library, developped by researchers from Carnegie Mellon University, that can be used to convert Uyghur-Arabic script texts to IPA phonemes.
+* [CMU Wilderness Alignment Model](https://github.com/festvox/datasets-CMU_Wilderness): The model used to create the Uyghur speech data for CMU Wilderness dataset. One can align and segment long Uyghur audio files using this model.
+* [Meta MMS Alignment Model](https://github.com/facebookresearch/fairseq/tree/main/examples/mms/data_prep): The model used to create the Uyghur speech data for Meta MMS project. One can align and segment long Uyghur audio files using this model.
+* [Sonix](https://sonix.ai/languages/transcribe-uyghur-audio): A Video and Audio transcription API with Uyghur support (Paid but can try 30 minuntes for free). 
 
 # 4. Reference
 <a id="references"></a>
