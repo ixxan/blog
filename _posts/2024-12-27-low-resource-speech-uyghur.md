@@ -74,7 +74,7 @@ Libraries like [librosa](https://librosa.org/doc/latest/index.html) and [pydub](
 
 Speech technology encompasses a broad range of applications that support various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
 
-**Automatic Speech Recognition (ASR)**, also known as **Speech-to-Text (SST)**, converts human speech into written text. ASR at the foundation of numerous technologies, such as virtual assistants, transcription services, real-time translation systems, and accessibility tools. To build a reliable ASR system, large datasets of transcribed speech, covering diverse speech patterns, accents, and languages, are essential. Its performance is typically evaluated using metrics like **Word Error Rate (WER)** or **Character Error Rate (CER)** on datasets such as [FLEURS](https://huggingface.co/datasets/google/fleurs) (a widely recognized benchmark for multilingual ASR, covering 102 languages)<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>4</sup></a>.
+**Automatic Speech Recognition (ASR)**, also known as **Speech-to-Text (SST)**, converts human speech into written text. ASR forms the foundation of numerous technologies, including virtual assistants, transcription services, real-time translation systems, and accessibility tools. To build a reliable ASR system, large datasets of transcribed speech, covering diverse speech patterns, accents, and languages, are essential. Its performance is typically evaluated using metrics like **Word Error Rate (WER)** or **Character Error Rate (CER)** on datasets such as [FLEURS](https://huggingface.co/datasets/google/fleurs) (a widely recognized benchmark for multilingual ASR, covering 102 languages)<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>4</sup></a>.
 
 **Speech Synthesis**, also known as **Text-to-Speech (TTS)**, converts written text into natural-sounding speech.  It is used in virtual assistants, audiobooks, language learning platforms, and tools for visually impaired users. High-quality TTS models typically need labeled audio data from a single speaker to produce realistic voices. Evaluation metrics include subjective measures like **Mean Opinion Score (MOS)** and objective metrics like **Word Error Rate (WER)** or **Character Error Rate (CER)** to assess the naturalness and accuracy of synthesized speech.
 
@@ -88,7 +88,7 @@ Some other common speech technology tasks include:
 
 There have been various architectures proposed for various speech tasks throughout the years. Here I would discuss 2 popular types. 
 
-### Traditional Approach: Hidden Markov Models (HMM)
+### 1.4.1 Traditional Approach: Hidden Markov Models (HMM)
 Hidden Markov Models (HMMs) were the foundation of many early ASR and TTS systems before the rise of deep learning-based models. They model speech as sequences of phonemes with probabilities for transitions and observations. 
 
 To better understand it, let’s try to recognize the word “hello” from a speech signal using HMMs. Here’s our set up:
@@ -104,7 +104,7 @@ Now to walk through the recognizing process:
 4. Finally, after processing the sequence of phonemes (states) and their corresponding observations, the model uses the transition and emission probabilities to determine the most likely sequence of phonemes that led to the observed acoustic features, which may led to /h/, /e/, /l/, /l/, /o/, or “hello.”
 
 
-### Modern Approach: End-to-End (E2E)
+### 1.4.2 Modern Approach: End-to-End (E2E)
 With the rise of deep learning methods in ML since the 2010s, researchers have achieved significant success with deep learning-based speech models, particularly End-to-End (E2E) architectures. E2E architectures eliminate the need for hand-crafted features and separate language and acoustic models by integrating both into a single neural network. Two common E2E structures are based on Connectionist Temporal Classification (CTC) loss functions and Sequence-to-Sequence (Seq2Seq) modeling. Below is how the word “hello” can be recognized using each approach:
 
 **CTC (Connectionist Temporal Classification)**: Encoder-only structure<a href="https://distill.pub/2017/ctc/" style="text-decoration: none;" target="_blank" title="Check out this tutorial to learn more"><sup>5</sup></a>
