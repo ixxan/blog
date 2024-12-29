@@ -118,7 +118,7 @@ With the rise of deep learning methods in ML since the 2010s, researchers have a
 
 Popular CTC-based ASR Models: [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2), [HuBERT](https://huggingface.co/docs/transformers/en/model_doc/hubert), [M-CTC-T](https://huggingface.co/docs/transformers/en/model_doc/mctct).
 
-<video src="./../images/ctc.mov" autoplay loop muted style="max-width: 100%; height: auto;"></video>
+<img src="./../images/ctc.png" alt="ctc" style="clear: both; max-width: 100%; height: auto;">
 
 *Demo of how CTC algorithm recognizes "hello" from input audio by [Awni Hannun](https://distill.pub/2017/ctc/)*
 
@@ -179,22 +179,22 @@ Over the years, substantial progress has been made in advancing Uyghur speech te
 ## 3.1 Brief History of Uyghur Language and Speech Technology
 <a id="brief-history-of-uyghur-language-and-speech-technology"></a>
 
-* **1994**: The Uyghur alphabet was incorporated into the international Unicode encoding standard[<sup>13</sup>](#13).
-* **1996**: The first Uyghur speech corpus was created, marking the start of Uyghur speech recognition research[<sup>14</sup>](#14).
-* **1998**: The first Uyghur website was established[<sup>13</sup>](#13).
-* **2004**: The first Uyghur search engine was developed[<sup>15</sup>](#15).
-* **2009**: A Uyghur continuous speech recognition system based on Hidden Markov Models (HMM) was developed[<sup>16</sup>](#16).
+* **1994**: The Uyghur alphabet was incorporated into the international Unicode encoding standard[<sup>13</sup>](#13)
+* **1996**: The first Uyghur speech corpus was created, marking the start of Uyghur speech recognition research[<sup>14</sup>](#14)
+* **1998**: The first Uyghur website was established[<sup>13</sup>](#13)
+* **2004**: The first Uyghur search engine was developed[<sup>15</sup>](#15)
+* **2009**: A Uyghur continuous speech recognition system based on Hidden Markov Models (HMM) was developed[<sup>16</sup>](#16)
 * **2014**:  
-    * Detailed acoustic feature analysis of Uyghur phonemes was conducted[<sup>17</sup>](#17).  
-    * A study on Uyghur speech retrieval was published[<sup>18</sup>](#18).
-* **2015**: Deep neural networks began to be applied to Uyghur speech recognition[<sup>19, </sup>](#19)[<sup>20</sup>](#20).
-* **2016**: Research focused on Uyghur speaker adaptation for speech recognition[<sup>21</sup>](#21).
-* **2017**: The THUYG20, a free Uyghur speech corpus, was released[<sup>22</sup>](#22).
-* **2021**: The state-of-the-art Conformer-CTC Uyghur speech recognition model was introduced[<sup>23</sup>](#23).
-* **2022**: A comprehensive overview of speech recognition techniques for Uyghur, Kazakh, and Kyrgyz was published[<sup>24</sup>](#24).
+    * Detailed acoustic feature analysis of Uyghur phonemes was conducted[<sup>17</sup>](#17) 
+    * A study on Uyghur speech retrieval was published[<sup>18</sup>](#18)
+* **2015**: Deep neural networks began to be applied to Uyghur speech recognition[<sup>19, </sup>](#19)[<sup>20</sup>](#20)
+* **2016**: Research focused on Uyghur speaker adaptation for speech recognition[<sup>21</sup>](#21)
+* **2017**: The THUYG20, a free Uyghur speech corpus, was released[<sup>22</sup>](#22)
+* **2021**: The state-of-the-art Conformer-CTC Uyghur speech recognition model was introduced[<sup>23</sup>](#23)
+* **2022**: A comprehensive overview of speech recognition techniques for Uyghur, Kazakh, and Kyrgyz was published[<sup>24</sup>](#24)
 * **2023**:  
-    * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25).  
-    * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26).
+    * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25)
+    * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26)
 
 ## 3.2 Uyghur Speech Datasets
 <a id="uyghur-speech-datasets"></a>
