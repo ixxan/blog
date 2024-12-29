@@ -53,8 +53,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 
 *The 44 phonemes of Standard English based on [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet).*
 
-## 1.2 Acoustics Basics
-<a id="acoustics-basics"></a>
+## 1.2 Acoustics Basics <a id="acoustics-basics"></a>
 
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
 <img src="./../images/vocal.png" alt="Vocal" style="float: right; max-width: 35%; margin-left: 15px; margin-top: 15px; margin-bottom: 20px; height: auto;">
@@ -71,8 +70,8 @@ Libraries like [librosa](https://librosa.org/doc/latest/index.html) and [pydub](
 
 *Comparison of Mel spectrograms for an audio clip saying "Hello World" at 16 kHz and 44.1 kHz sampling rates. Higher sampling rates capture more detailed information, as seen in the richer frequency representation at 44.1 kHz.*
 
-## 1.3 Speech Applications
-<a id="speech-applications"></a>
+## 1.3 Speech Applications <a id="speech-applications"></a>
+
 Speech technology encompasses a broad range of applications that facilitate various tasks. Among these, Automatic Speech Recognition and Speech Synthesis are two of the most influential and widely used.
 
 **Automatic Speech Recognition (ASR)**, also known as **Speech-to-Text (SST)**, converts human speech into written text. ASR at the foundation of numerous technologies, such as virtual assistants, transcription services, real-time translation systems, and accessibility tools. To build a reliable ASR system, large datasets of transcribed speech, covering diverse speech patterns, accents, and languages, are essential. Its performance is typically evaluated using metrics like **Word Error Rate (WER)** or **Character Error Rate (CER)** on datasets such as [FLEURS](https://huggingface.co/datasets/google/fleurs) (a widely recognized benchmark for multilingual ASR, covering 102 languages)<a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data" style="text-decoration: none;" target="_blank" title="Check out this HuggingFace course to learn more"><sup>4</sup></a>.
@@ -85,8 +84,8 @@ Some other common speech technology tasks include:
 * **Speaker Diarization**: Identifying the speaker at any given moment in an audio clip.
 * **Keyword Detection**: Detecting specific words or phrases in continuous speech, often used for wake-word detection in voice assistants.
 
-## 1.4 Notable Architectures
-<a id="notable-architectures"></a>
+## 1.4 Notable Architectures <a id="notable-architectures"></a>
+
 There have been various architectures proposed for various speech tasks throughout the years. Here I would discuss 2 popular types. 
 
 ### Traditional Approach: Hidden Markov Models (HMM)
@@ -134,8 +133,7 @@ Popular Seq2Seq-based TTS models: [SpeechT5](https://github.com/microsoft/Speech
 
 *The encoder-decoder structure shown in [OpenAI Whisper blog](https://openai.com/index/whisper/)*
 
-# 2. Low-Resource Language Speech Research
-<a id="low-resource-language-speech-research"></a>
+# 2. Low-Resource Language Speech Research <a id="low-resource-language-speech-research"></a>
 
 **Low-resource languages** are languages with limited linguistic data resources, such as annotated text corpora or speech recordings, which are essential for building robust speech and language models. In recent years, efforts by various research groups and organizations have led to some significant progress in data creation and model development for low-resource languages. Below are a few notable examples.
 
@@ -163,8 +161,7 @@ Meta-MMS models outperformed some existing state-of-the-art models, including Op
 To see examples of fine-tuning these models for specific low-resource languages, continue to the next section.
 
 
-# 3. Uyghur Speech Technology
-<a id="uyghur-speech-technology"></a>
+# 3. Uyghur Speech Technology <a id="uyghur-speech-technology"></a>
 
 <img src="./../images/alphabet.png" alt="Alphabet" style="float: right; max-width: 35%; margin-left: 15px; margin-top: 15px; margin-bottom: 20px; height: auto;">
 
@@ -174,8 +171,7 @@ Modern Uyghur has a unique alphabet with **32 letters**, including **8 vowels** 
 
 Over the years, substantial progress has been made in advancing Uyghur speech technology, driven by the efforts of researchers, organizations, and individuals. This overview will provide a brief history of these developments, including references for readers interested in learning more, and present available datasets, models, implementation tutorials, and tools for those looking to contribute to this field. The ultimate goal is to inspire the creation of more applications aimed at preserving the Uyghur language and potentially provide insights that can benefit other low-resource languages.
 
-## 3.1 Brief History of Uyghur Language and Speech Technology
-<a id="brief-history-of-uyghur-language-and-speech-technology"></a>
+## 3.1 Brief History of Uyghur Language and Speech Technology <a id="brief-history-of-uyghur-language-and-speech-technology"></a>
 
 * **1994**: The Uyghur alphabet was incorporated into the international Unicode encoding standard[<sup>13</sup>](#13)
 * **1996**: The first Uyghur speech corpus was created, marking the start of Uyghur speech recognition research[<sup>14</sup>](#14)
@@ -194,8 +190,7 @@ Over the years, substantial progress has been made in advancing Uyghur speech te
     * Nazarbayev University released Turkic TTS, including a TTS model for Uyghur[<sup>25</sup>](#25)
     * Meta released its MMS models, featuring ASR, TTS, and language identification for Uyghur[<sup>26</sup>](#26)
 
-## 3.2 Available Uyghur Speech Datasets
-<a id="available-uyghur-speech-datasets"></a>
+## 3.2 Available Uyghur Speech Datasets <a id="available-uyghur-speech-datasets"></a>
 
 ### THUYG20
 The THUYG20 Dataset, published in 2017 by researchers from Tsinghua University and Xinjiang University, is widely recognized as a **benchmark** for Uyghur speech models. It includes **20 hours of training** speech and **1 hour of test** speech from native Uyghur speakers. Additionally, the dataset includes valuable supplementary resources such as THUYG20-SRE for speaker recognition and a phoneme dictionary. These datasets can be downloaded directly from [here](https://openslr.org/22).
@@ -214,8 +209,7 @@ To any Uyghur speakers reading this: **please contribute**! By dedicating just a
 The UQSpeechDataset features recordings of **single-speaker** making it highly suitable for Text-to-Speech (TTS) training. Created by Mr. Gheyret Kenji and other Uyghur scholars, this dataset consists of audio translations of the **Noble Quran** in Uyghur, segmented into 10-second clips, with transcripts provided in Uyghur Arabic, Latin, and Cyrillic scripts. This dataset is publicly avaiable in this [repository](https://github.com/gheyret/UQSpeechDataset).
 
 
-## 3.3 Available Uyghur Speech Models
-<a id="available-uyghur-speech-models"></a>
+## 3.3 Available Uyghur Speech Models <a id="available-uyghur-speech-models"></a>
 
 Several publicly available Uyghur speech models exist, however, they are usually part of a larger model not specifically trained for Uyghur. Thus, I fine-tuned some of them with the datasets mentioned earlier. I also released the fine-tuning code for others to reference in my [GitHub repository](https://github.com/ixxan/ug-speech).
 
@@ -239,8 +233,7 @@ While OpenAI’s Whisper model is not available in Uyghur, it is available for U
 * [Whisper-Small-Uyghur-Common-Voice](https://huggingface.co/ixxan/whisper-small-uyghur-common-voice)
 * [Whisper-Small-Uyghur-THUGY20](https://huggingface.co/ixxan/whisper-small-uyghur-thugy20)
 
-## 3.4 Additional Tools 
-<a id="additional-tools"></a>
+## 3.4 Additional Tools  <a id="additional-tools"></a>
 Here are some additional tools I found helpful for those who are interested in working on Uyghur speech projects:
 
 * [Uyghur Script Converter](https://github.com/neouyghur/Uyghur-Multi-Script-Converter/tree/master): An Uyghur script converter library created by Dr. Osman Tursun to help easily convert Uyghur texts across various Uyghur scripts.
@@ -249,8 +242,7 @@ Here are some additional tools I found helpful for those who are interested in w
 * [Meta MMS Alignment Model](https://github.com/facebookresearch/fairseq/tree/main/examples/mms/data_prep): The model used to create the Uyghur speech data for Meta MMS project. One can align and segment long Uyghur audio files using this model.
 * [Sonix](https://sonix.ai/languages/transcribe-uyghur-audio): A Video and Audio transcription API with Uyghur support (Paid but can try 30 minuntes for free). 
 
-# 4. Reference
-<a id="references"></a>
+# 4. Reference <a id="references"></a>
 
 <a id="1"></a>1. Ethnologue. *Languages of the World*.
 
