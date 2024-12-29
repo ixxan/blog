@@ -59,7 +59,7 @@ Python libraries like [epitran](https://github.com/dmort27/epitran) can be used 
 <a id="acoustics-basics"></a>
 
 Acoustics studies how waves travel through media like air or water, crucial for understanding human speech and building audio processing systems.
-<img src="./../images/vocal.png" alt="Vocal" style="float: right; max-width: 30%; margin-left: 20px; margin-top: 20px; margin-bottom: 20px; height: auto;">
+<img src="./../images/vocal.png" alt="Vocal" style="float: right; max-width: 35%; margin-left: 15px; margin-top: 15px; margin-bottom: 20px; height: auto;">
 
 Speech production begins with our vocal folds creating a basic sound when air passes through them. However, before the sound exits the mouth, it travels through the vocal tract (throat, mouth, and nose) which shapes and modifies it. These modifications produce **formants**, which are resonant frequencies essential for distinguishing sounds in a language, especially vowels<a href="http://www.voicescienceworks.org/harmonics-vs-formants.html" style="text-decoration: none;" target="_blank" title="Visit Voice Science Works for more info"><sup>2</sup></a>.
 
@@ -168,7 +168,7 @@ To see examples of fine-tuning these models for specific low-resource languages,
 # 3. Uyghur Speech Technology
 <a id="uyghur-speech-technology"></a>
 
-<img src="./../images/alphabet.png" alt="Alphabet" style="float: right; max-width: 30%; margin-left: 20px; margin-top: 20px; margin-bottom: 20px; height: auto;">
+<img src="./../images/alphabet.png" alt="Alphabet" style="float: right; max-width: 35%; margin-left: 15px; margin-top: 15px; margin-bottom: 20px; height: auto;">
 
 Uyghur, spoken by over 13 million people worldwide—primarily in Central Asia—represents a rich cultural and linguistic heritage. It is closely related to Uzbek, both belonging to the **Karluk** branch of the **Turkic language family**, and shares significant similarities with other Turkic languages like Kazakh, Turkish, etc.
 
