@@ -6,7 +6,7 @@ layout: post
 categories: media
 ---
 
-<img src="./../images/speech.jpg" alt="speech" style="max-width: 100%; height: auto;">
+<img src="https://raw.githubusercontent.com/ixxan/blog/refs/heads/master/images/speech.jpg" alt="speech" style="max-width: 100%; height: auto;">
 
 Language is a cornerstone of human culture, shaping our identities, traditions, and ways of thinking. With over 7,000 languages spoken globally, it's alarming that nearly half are endangered<a href="https://www.ethnologue.com" style="text-decoration: none;" target="_blank" title="Visit Ethnologue for more info"><sup>1</sup></a>. When a language disappears, its speakers lose a vital connection to their heritage and history. The world also loses unique perspectives, cultural knowledge, and valuable insights into human behavior and ways of life.
 
