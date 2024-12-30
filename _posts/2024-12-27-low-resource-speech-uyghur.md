@@ -211,7 +211,7 @@ The UQSpeechDataset features recordings of a **single speaker** making it highly
 
 ## 3.3 Available Uyghur Speech Models <a id="available-uyghur-speech-models"></a>
 
-Several publicly available Uyghur speech models exist, however, they are typically part of larger models not specifically trained for Uyghur. Thus, I have fine-tuned some these models with the datasets mentioned earlier and released the fine-tuning code in my [GitHub repository](https://github.com/ixxan/ug-speech). These models can be used for inference via the methods provided below.
+Several publicly available Uyghur speech models exist, however, they are typically part of larger models not specifically trained for Uyghur. Thus, I have fine-tuned some these models with the datasets mentioned earlier and released the fine-tuning code in my [GitHub repository](https://github.com/ixxan/ug-speech). These models can be downloaded and used for inference from the links provided in the section below.
 
 Additionally, the results from all the models are demonstrated in my [HuggingFace space](https://huggingface.co/spaces/ixxan/uyghur-speech-models), along with this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
