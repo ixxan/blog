@@ -17,7 +17,7 @@ In today's digital age, speech technologies integrated into smartphones and othe
 Thus, through this article, I would like to:
 1. Offer a tutorial on the fundamentals of speech technology for those interested
 2. Explore recent advancements in speech technology research for low-resource languages
-3. Share some valuable resources and my implementations for my native language, Uyghur
+3. Share some valuable resources and implementations for my native language, Uyghur
 
 By addressing these topics, I hope to inspire further efforts in preserving linguistic diversity and advancing speech technologies that can support a wider range of languages.
 
