@@ -1,5 +1,5 @@
 ---
-title:  "Speech Technology for Low-Resource Languages: Advancements and Resources for Uyghur"
+title:  "Speech Technology for All: Fundamentals, Advancements, and Implementations"
 author: "Irpan Abdurahman"
 mathjax: false
 layout: post
