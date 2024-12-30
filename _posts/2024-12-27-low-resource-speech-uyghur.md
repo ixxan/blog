@@ -220,7 +220,7 @@ Additionally, the results from all the models are demonstrated in my [HuggingFac
 *Demo of a [Uyghur Pronunciation Checker](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) application created using fine-tuned ASR and TTS models*
 
 ### TurkicTTS
-Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model uses the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. The pre-trained TurkicTTS model and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS) for download and inference.
+Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech (TTS)** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model uses the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. The pre-trained TurkicTTS model and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS) for download and inference.
 
 ### Meta MMS
 As previously mentioned, Meta’s Massively Multilingual Speech project includes models for Uyghur **Automatic Speech Recognition (ASR)**, **Text-to-Speech (TTS)**, and **language identification (LID)** trained from single-speaker biblical recording data. You can try these models in this HuggingFace [demo](https://huggingface.co/spaces/mms-meta/MMS) or use their checkpoints from the following sources: 
@@ -233,7 +233,7 @@ To improve the accuracy of these models for Uyghur, I fine-tuned the ASR model u
 * [FineTuned-MMS-TTS-Uyghur](https://huggingface.co/ixxan/mms-tts-uig-script_arabic-UQSpeech)
 
 ### OpenAI Whisper
-While OpenAI’s Whisper model is not available for Uyghur, it is available for Uzbek. As Uzbek is closely related to Uyghur, I fine-tuned the Uzbek whisper-small model using approximately 20 hours of training speech from Uyghur Common Voice and the THUYG20 datasets. The fine-tuned models resulted in a 10.9% CER on Common Voice and 4.9% CER on THUYG20. These models are available here:
+While OpenAI’s Whisper model for **Automatic Speech Recognition (ASR)** is not available for Uyghur, it is available for Uzbek. As Uzbek is closely related to Uyghur, I fine-tuned the Uzbek whisper-small model using approximately 20 hours of training speech from Uyghur Common Voice and the THUYG20 datasets. The fine-tuned models resulted in a 10.9% CER on Common Voice and 4.9% CER on THUYG20. These models are available here:
 * [FineTuned-Whisper-Small-Uyghur-Common-Voice](https://huggingface.co/ixxan/whisper-small-uyghur-common-voice)
 * [FineTuned-Whisper-Small-Uyghur-THUGY20](https://huggingface.co/ixxan/whisper-small-uyghur-thugy20)
 
