@@ -211,13 +211,13 @@ The UQSpeechDataset features recordings of a **single speaker** making it highly
 
 ## 3.3 Available Uyghur Speech Models <a id="available-uyghur-speech-models"></a>
 
-Several publicly available Uyghur speech models exist, however, they are typically part of larger models not specifically trained for Uyghur. Thus, I have fine-tuned some these models with the datasets mentioned earlier and released the fine-tuning code in my [GitHub repository](https://github.com/ixxan/ug-speech). These models can be downloaded and used for inference from the links provided in the section below.
+Several publicly available Uyghur speech models exist, however, they are typically part of larger models not specifically trained for Uyghur. Thus, I have fine-tuned some of these models with the datasets mentioned earlier and released the fine-tuning code in my [GitHub repository](https://github.com/ixxan/ug-speech). These models can be downloaded and used for inference from the links provided in the section below.
 
 Additionally, the results from all the models are demonstrated in my [HuggingFace space](https://huggingface.co/spaces/ixxan/uyghur-speech-models), along with this [Uyghur pronunciation checker app](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) I was able to create using some of them. 
 
 <img src="./../images/demo.png" alt="Demo" style="max-width: 100%; height: auto;">
 
-*Demo of a [Uyghur Pronunciation Checker](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) application created using fine-tuned ASR and TTS models*
+*Demo of the [Uyghur Pronunciation Checker](https://huggingface.co/spaces/ixxan/uyghur-pronunciation-checker) application created using fine-tuned ASR and TTS models*
 
 ### TurkicTTS
 Released in 2023 by researchers at Nazarbayev University, the TurkicTTS model enables **Text-to-Speech (TTS)** for Uyghur, among other Turkic languages. Trained on high-quality Kazakh speech data, the model uses the International Phonetic Alphabet (IPA) to phonetically map letters across Turkic languages. The pre-trained TurkicTTS model and resources are publicly available in this [repository](https://github.com/IS2AI/TurkicTTS) for download and inference.
