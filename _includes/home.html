@@ -1,4 +1,4 @@
-{%- assign posts = paginator.posts | default: site.posts -%}
+{%- assign posts = paginator.posts | default: site.posts | reverse -%}
 {% for post in posts %}
   <article>
     {% include meta.html post=post preview=true %}
