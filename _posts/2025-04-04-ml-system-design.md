@@ -8,6 +8,8 @@ categories: media
 
 This guide is intended for people preparing for ML system design interviews. It covers key concepts across common domains like regression, classification, NLP, computer vision, and recommendation/ranking/search systems. It also provides a step-by-step framework one can follow to come up with a end-to-end solution. 
 
+
+
 # Table of Contents
 - [Machine Learning Concepts](#machine-learning-concepts)
   - [Regression](#regression)
