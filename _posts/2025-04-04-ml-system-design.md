@@ -19,9 +19,20 @@ This guide is intended for people preparing for ML system design interviews. It 
   - [Computer Vision](#computer-vision)
   - [Recommendation & Ranking](#recommendation-and-ranking)
   - [Retrieval](#retrieval)
+- [Machine Learning System Lifecycle](#machine-learning-system-lifecycle)
+  - [Feature Engineering](#feature-engineering)ent
+  - [Training](#training)
+  - [Inference](#inference)
+  - [Deployment](#deployment)
+  - [Scaling](#scaling)
+  - [Online Metrics](#online-metrics)
+  - [Monitoring & Updates](#monitoring-and-update)
 - [Machine Learning System Design Framework](#machine-learning-system-design-framework)
+  - [Example Questions](#example-questions)
 
 # 🤖 Machine Learning Concepts <a id="machine-learning-concepts"></a>
+
+---
 
 ## 📈 Regression <a id="regression"></a>
 **Goal**: Predict a continuous scalar value.
@@ -224,6 +235,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 - **Pairwise Ranking**  
   - **Use when**: You want to compare pairs of items to determine the better one.  
   - **Tradeoffs**: Computationally expensive.
+
 ---
 
 ## 🔍 Retrieval <a id="retrieval"></a>
@@ -250,5 +262,238 @@ This guide is intended for people preparing for ML system design interviews. It 
 - **Approximate Nearest Neighbors (ANN)**  
   - **Use when**: Fast, scalable retrieval in large datasets.  
   - **Tradeoffs**: May not always find exact neighbors, but balances speed and accuracy well.
+
+---
+
+# 🔄 Machine Learning System Lifecycle <a id="machine-learning-system-lifecycle"></a>
+
+---
+
+## 🧱 Feature Engineering <a id="feature-engineering"></a>
+
+### Step 1: Feature Selection
+- Define key actors: users, items, queries, etc.
+- Extract actor-specific features based on tasks. 
+
+### Step 2: Create New Features
+- **Cross Features**: Combine entities like User-Item (user-video watch history), Query-Doc.
+- **Statistical / ML Features**:
+  - Polynomial: capture non-linear relationships.
+  - Binning: convert numerical data into categorical groups.
+  - Feature Interactions: combine existing features (add, multiply, divide).
+  - Clustering: (e.g., k-mean, mean-shift) to assign entities to clusters.
+  - PCA: Dimensionality reduction, visualization.
+  - SVD: Dimensionality reduction, recommendation, latent semantic analysis (LSA).
+
+### Step 3: Handling Missing Data
+- **Drop**: If rare (<5%).
+- **Imputation**:
+  - Mean/median (numerical), mode (categorical)
+  - Forward/backward fill (time-series)
+  - Predictive models (KNN, regression)
+  - Indicator variable (flag missing values)
+
+### Step 4: Transformation
+- **Numerical**:
+  - Scaling: StandardScaler(Z-score), MinMax, Robust
+  - Log transformation
+- **Categorical**:
+  - One-Hot Encoding (nominal/unordered)
+  - Ordinal Encoding (ordered)
+  - Target Encoding (mean target value, watch out for leakage!)
+  - Embeddings (high-cardinality categories)
+- **Text**:
+  - Tokenization: Word, subword (BPE, WordPiece).
+  - Normalization: Lowercasing, stemming, lemmatization, stop-word removal
+  - Vectorization/Embeddings: TF-IDF, Word2Vec, BERT, GPT.
+  - Padding & Truncation: To fixed input size.
+- **Images**:
+  - Resize, normalize (scale to [0,1]).
+  - Data augmentation (flips, rotations, cropping).
+  - Normalization: Pixel value scaling (e.g., [0,1], mean-std).
+  - Conversion: RGB <-> grayscale if needed.
+  - Batching: Consider padding for varying sizes (segmentation, detection).
+  - Feature extraction (ResNet, EfficientNet).
+- **Videos**:
+  - Frame sampling, optical flow analysis.
+  - Convert video to embeddings
+
+### Step 5: Handling Outliers
+- **Detection**: Z-score (>3σ), IQR (>1.5×IQR).
+- **Treatment**: Winsorization (cap at 5th & 95th percentiles), log transform (mitigate extreme values).
+
+### Step 6: Handling Imbalanced Data
+- **Resampling**: 
+ - Oversampling (SMOTE, ADASYN): add more underrepresented class 
+ - Undersampling (reduce majority class): reduce the number of majority class (can lead to info loss)
+- **Class Weights**: Assign more weights to underrepresented class.
+- **Threshold Tuning**: Adjust using Precision-Recall AUC.
+
+### Step 7: Privacy & Compliance
+- Data minimization, anonymization & hashing.
+- Ensure user consent & GDPR compliance.
+- Differential privacy (add noise to prevent identification).
+- Federated learning (train models without centralizing data).
+
+---
+
+## 🏋️ Training
+
+### Data Splits
+Train/Dev/Test (make sure no leakage and ensure generalization!).
+
+### Training Modes
+- Offline Training: Train on historical data.
+- Online Learning: Continuously update with new data.
+- Warm Start: Train with historical data and fine-tune with recent behavior.
+
+### Loss Function
+- Classification:
+  - Cross-Entropy (Log-Loss): Measures the difference between predicted probability and actual class.
+- Regression:
+  - Mean Squared Error (MSE): Penalizes large errors more than small ones.
+  - Mean Absolute Error (MAE): More robust to outliers than MSE.
+- Ranking:
+  - Pairwise Losses: e.g., hinge loss (SVM), triplet loss (embedding learning).
+
+### Techniques
+- Cross-Validation: For robustness.
+- Hyperparameter Tuning: Grid search, random search, Bayesian.
+- Transfer Learning: Start from pretrained models.
+- AutoML: Automate feature selection, model search (NAS), tuning.
+- Distributed Training: Parallelize with data/model parallelism.
+- Regularization: prevents overfitting by adding constraints to the model or altering the training data.
+    - Weight Regularization:
+        - L1 (Lasso): Adds absolute weight penalty (λ * |w|) → Encourages sparsity, good for feature selection.
+        - L2 (Ridge): Adds squared weight penalty (λ * w²) → Shrinks weights to prevent overfitting.
+        - ElasticNet: Combines L1 and L2 penalties.
+    - Dropout: Randomly “drops” neurons during training to prevent co-adaptation and improve generalization.
+    - Data Augmentation: Especially for image/text/audio. Random transformations (e.g., crop, rotate, synonym replacement) to increase diversity of training data.
+    - Early Stopping: Monitor validation loss and stop training when it stops improving.
+    - Batch Normalization: Stabilizes training by normalizing layer inputs. Acts as a mild regularizer.
+    - Label Smoothing: Instead of hard 0/1 targets, use soft targets (e.g., 0.9 for correct class, 0.1 distributed among others). Helps prevent overconfidence.
+    - Adversarial Training: Add small perturbations to inputs during training to improve robustness.
+
+---
+
+## ⚡ Inference
+
+- **Batch Inference**: High throughput, pre-computed.
+- **Real-Time**: Low latency, live predictions.
+- **Hybrid**: e.g., Netflix recommendation – batch for candidates, real-time for ranking.
+
+---
+
+## 🚀 Deployment
+
+### 🔵 Blue-Green Deployment
+Safely release a new version (code, model, service) with zero downtime.
+- Have two identical environments: one live (**Blue**) and one staging (**Green**).
+- Test in staging (Green). Once ready, switch all users from Blue to Green.
+- If something breaks, rollback quickly by switching back to Blue.
+
+### 🧪 A/B Experiments
+Split users into two groups and give them different versions (control vs. test) to measure which one performs better.
+- Make sure each group is representative of the user base to avoid bias.
+- Measure impact using metrics like CTR, CVR.
+- **Null Hypothesis (H₀)**: No significant difference between the control and test groups (e.g., “The new model has the same performance as the current model”).
+  - If **p-value < 0.05**, reject the null hypothesis (statistically significant difference).
+  - If **p-value > 0.05**, fail to reject the null hypothesis.
+
+### 🎰 Bandits
+Improve A/B testing by dynamically allocating more traffic to the better-performing version.
+- **Multi-Armed Bandit (MAB)**: Allocates more traffic to the better-performing version while continuing to explore other options.
+- **Exploration vs. Exploitation**: Balances trying new options (exploration) and focusing on the best-performing option (exploitation).
+- **Benefits**: More efficient use of traffic and reduced risk compared to traditional A/B testing.
+
+### 🐤 Canary Release
+Gradually roll out a new model to a small subset of users before releasing it to the entire user base.
+- **How?** A small group of users (canary group) gets the new model. If it performs well, the rollout is expanded.
+- **Benefits**: Controlled testing and minimizes risk before full deployment.
+
+### 🕵️ Shadow Deployment
+Test a new model or feature in a live environment without affecting the user experience.
+- **How?** The new model is deployed but runs in the background. Its predictions are logged for analysis alongside the current model’s output.
+- **Benefits**: Risk-free testing in real-world conditions and allows for early identification of issues.
+
+### ❄️ Cold Start
+Launching a new model or feature with minimal or no historical data.
+
+**Model Cold Start**: Deploying a new model without sufficient training data.
+- **Data Augmentation**: Use external or synthetic data to improve training.
+- **Transfer Learning**: Use a pre-trained model on similar data.
+- **Hybrid Models**: Combine new models with simpler systems until more data is collected.
+
+**Feature Cold Start**: Introducing a new feature without enough historical data.
+- **New User**
+  - Ask onboarding questions (genres, interests)
+  - Use user metadata (age, location, device)
+  - Recommend popular/trending items
+- **New Item**
+  - Use content-based features (title, category, description)
+  - Embed item with similar existing items
+  - Boost it a little so the system can explore how users respond (exploration vs. exploitation)
+
+---
+
+## 📈 Scaling
+
+### General System Scaling
+- **Distributed Servers**: Spread servers across different locations to improve reliability and speed.
+- **CDN (Content Delivery Network)**: Use nearby servers to deliver content faster to users.
+- **Load Balancers**: Distribute network traffic to multiple servers to keep everything running efficiently.
+- **Sharding**: Split data into smaller chunks to improve database performance.
+- **Replication**: Copy data to multiple places for backup and faster access.
+- **Caching**: Store frequently used data temporarily for faster access.
+
+### ML System Scaling
+- **Data Parallelism**: Distribute data across multiple nodes to speed up training (e.g., TensorFlow, PyTorch).
+- **Model Parallelism**: Split the model across multiple machines (for very large models).
+- **Asynchronous SGD**: Each worker updates parameters asynchronously.
+- **Synchronous SGD**: Workers update parameters simultaneously to ensure consistency.
+- **Distributed Training**: Training on multiple machines to speed up large-scale model training.
+
+---
+
+## 🧪 Online Metrics
+
+- **Click-Through Rate (CTR)** – Fraction of users who click on a recommended item.
+- **Conversion Rate (CVR)** – Fraction of users who take a desired action (e.g., purchase, sign-up).
+- **Engagement Metrics** – Time spent, interactions per session, number of likes, CPE (Cost Per Engagement).
+- **Revenue Impact** – Revenue per user, average order value.
+- **Latency & System Performance** – Response time, request throughput.
+- **User Retention & Churn** – How many users return vs. leave.
+
+---
+
+## 🔍 Monitoring & Updates
+
+### Monitoring
+- **Logging**: Features, predictions, metrics.
+- **Metrics**:
+  - **SW System Metrics**: Server load, response time, uptime, etc.
+  - **ML Metrics**: Accuracy, loss, predictions, feature distributions.
+  - **Online & Offline Metric Dashboards**: Visualize real-time vs historical metrics for insights.
+- **Data Distribution Shifts**:
+  - **Types of Shifts**:
+    - **Covariate Shift**: Change in the distribution of input data.
+    - **Label Shift**: Change in the distribution of output labels.
+    - **Concept Shift**: Change in the relationship between input and output.
+  - **Detection**: Use statistical methods or hypothesis testing (e.g., Kolmogorov-Smirnov test).
+  - **Correction**: Adjust model or retrain with fresh data.
+- **System Failures**:
+  - **SW System Failures**: Dependency issues, deployment errors, hardware downtime.
+  - **ML System Failures**: Data distribution differences (test vs. real-time), feedback loops.
+  - **Edge Cases**: Handling invalid or junk inputs.
+  - **Alarms**: Set up alarms for failures in data pipelines, low metric performance, or system downtimes.
+
+### Updates
+- **Continual Training**: Update the model as new data becomes available.
+  - **Model Updates**: Fine-tune or retrain from scratch based on new data.
+  - **Frequency**: Decide on how often to retrain (daily, weekly, monthly, etc.).
+  - **Auto Update Models**: Automate model updates to keep the system up-to-date.
+  - **Active Learning**: Use human-in-the-loop systems to improve model performance by selecting uncertain samples for labeling.
+
+---
 
 # Machine Learning System Design Framework
