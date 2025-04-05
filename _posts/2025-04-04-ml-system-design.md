@@ -15,12 +15,12 @@ This guide is intended for people preparing for ML system design interviews. It 
 - [Machine Learning Concepts](#machine-learning-concepts)
   - [Regression](#regression)
   - [Classification](#classification)
-  - [Natural Language Processing (NLP)](#natural-language-processing-nlp)
+  - [Natural Language Processing](#natural-language-processing-nlp)
   - [Computer Vision](#computer-vision)
   - [Recommendation & Ranking](#recommendation-and-ranking)
   - [Retrieval](#retrieval)
 - [Machine Learning System Lifecycle](#machine-learning-system-lifecycle)
-  - [Feature Engineering](#feature-engineering)ent
+  - [Feature Engineering](#feature-engineering)
   - [Training](#training)
   - [Inference](#inference)
   - [Deployment](#deployment)
@@ -337,7 +337,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🏋️ Training
+## 🏋️ Training <a id="training"></a>
 
 ### Data Splits
 Train/Dev/Test (make sure no leakage and ensure generalization!).
@@ -376,7 +376,7 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 
 ---
 
-## ⚡ Inference
+## ⚡ Inference <a id="inference"></a>
 
 - **Batch Inference**: High throughput, pre-computed.
 - **Real-Time**: Low latency, live predictions.
@@ -384,7 +384,7 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 
 ---
 
-## 🚀 Deployment
+## 🚀 Deployment <a id="deployment"></a>
 
 ### 🔵 Blue-Green Deployment
 Safely release a new version (code, model, service) with zero downtime.
@@ -436,7 +436,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 📈 Scaling
+## 📈 Scaling <a id="scaling"></a>
 
 ### General System Scaling
 - **Distributed Servers**: Spread servers across different locations to improve reliability and speed.
@@ -455,7 +455,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 🧪 Online Metrics
+## 🧪 Online Metrics <a id="online-metrics"></a>
 
 - **Click-Through Rate (CTR)** – Fraction of users who click on a recommended item.
 - **Conversion Rate (CVR)** – Fraction of users who take a desired action (e.g., purchase, sign-up).
@@ -466,7 +466,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 🔍 Monitoring & Updates
+## 🔍 Monitoring & Updates <a id="monitoring-and-updates"></a>
 
 ### Monitoring
 - **Logging**: Features, predictions, metrics.
