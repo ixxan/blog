@@ -250,5 +250,4 @@ This guide is intended for people preparing for ML system design interviews. It 
   - **Use when**: Fast, scalable retrieval in large datasets.  
   - **Tradeoffs**: May not always find exact neighbors, but balances speed and accuracy well.
 
-
 # Machine Learning System Design Framework
