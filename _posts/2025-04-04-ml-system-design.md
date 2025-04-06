@@ -15,7 +15,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 - [ML Concepts](#ml-concepts)
   - [Regression](#regression)
   - [Classification](#classification)
-  - [Natural Language Processing](#natural-language-processing-nlp)
+  - [Natural Language Processing](#natural-language-processing)
   - [Computer Vision](#computer-vision)
   - [Recommendation & Ranking](#recommendation-and-ranking)
   - [Retrieval](#retrieval)
@@ -30,11 +30,11 @@ This guide is intended for people preparing for ML system design interviews. It 
 - [ML System Design Steps Framework](#ml-system-design-steps-framework)
   - [Example Questions](#example-questions)
 
-# 🤖 ML Concepts <a id="ml-concepts"></a>
+# <a id="ml-concepts">🤖 ML Concepts</a>
 
 ---
 
-## 📈 Regression <a id="regression"></a>
+## <a id="regression">📈 Regression</a>
 **Goal**: Predict a continuous scalar value.
 
 ### 🧪 Offline Metrics
@@ -61,7 +61,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🏷️ Classification <a id="classification"></a>
+## <a id="classification">🏷️ Classification</a>
 **Goal**: Predict a discrete label/category.
 
 ### 🧪 Offline Metrics
@@ -101,7 +101,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🗣️ Natural Language Processing <a id="natural-language-processing-nlp"></a>
+## <a id="natural-language-processing">🗣️ Natural Language Processing</a>
 **Goal**: Analyze or generate human language data.
 
 ### 📝 Typical Tasks
@@ -141,7 +141,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🖼️ Computer Vision  <a id="computer-vision"></a>
+## <a id="computer-vision">🖼️ Computer Vision</a>
 **Goal**: Extract insights from image or video data.
 
 ### 🧪 Offline Metrics
@@ -178,7 +178,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🎯 Recommendation & Ranking <a id="recommendation-and-ranking"></a>
+## <a id="recommendation-and-ranking">🎯 Recommendation & Ranking</a>
 
 **Goal**: Suggest relevant items to users by ranking items based on similarity or a scoring function.
 
@@ -238,7 +238,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🔍 Retrieval <a id="retrieval"></a>
+## <a id="retrieval">🔍 Retrieval</a>
 
 **Goal**: Find relevant candidates from a large collection.
 
@@ -265,11 +265,11 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-# 🔄 ML System Lifecycle <a id="ml-system-lifecycle"></a>
+# <a id="ml-system-lifecycle">🔄 ML System Lifecycle</a>
 
 ---
 
-## 🧱 Feature Engineering <a id="feature-engineering"></a>
+## <a id="feature-engineering">🧱 Feature Engineering</a>
 
 ### Step 1: Feature Selection
 - Define key actors: users, items, queries, etc.
@@ -337,7 +337,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-## 🏋️ Training <a id="training"></a>
+## <a id="training">🏋️ Training</a>
 
 ### Data Splits
 Train/Dev/Test (make sure no leakage and ensure generalization!).
@@ -376,7 +376,7 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 
 ---
 
-## ⚡ Inference <a id="inference"></a>
+## <a id="inference">⚡ Inference</a>
 
 - **Batch Inference**: High throughput, pre-computed.
 - **Real-Time**: Low latency, live predictions.
@@ -384,7 +384,7 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 
 ---
 
-## 🚀 Deployment <a id="deployment"></a>
+## <a id="deployment">🚀 Deployment</a>
 
 ### 🔵 Blue-Green Deployment
 Safely release a new version (code, model, service) with zero downtime.
@@ -436,7 +436,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 📈 Scaling <a id="scaling"></a>
+## <a id="scaling">📈 Scaling</a>
 
 ### General System Scaling
 - **Distributed Servers**: Spread servers across different locations to improve reliability and speed.
@@ -455,7 +455,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 🧪 Online Metrics <a id="online-metrics"></a>
+## <a id="online-metrics">🧪 Online Metrics</a>
 
 - **Click-Through Rate (CTR)** – Fraction of users who click on a recommended item.
 - **Conversion Rate (CVR)** – Fraction of users who take a desired action (e.g., purchase, sign-up).
@@ -466,7 +466,7 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-## 🔍 Monitoring & Updates <a id="monitoring-and-updates"></a>
+## <a id="monitoring-and-updates">🔍 Monitoring & Updates</a>
 
 ### Monitoring
 - **Logging**: Features, predictions, metrics.
@@ -496,12 +496,11 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-# 🧠 ML System Design Steps Framework  <a id="ml-system-design-steps-framewor"></a>
+# <a id="ml-system-design-steps-framework">🧠 ML System Design Steps Framework</a>
 
 ⏱️ **Total Duration: ~40 minutes**  
 Each section includes a time estimate to help pace your response.
 
----
 
 ## 🔹 Step 1: Define the Problem (5-7 min)
 
@@ -524,7 +523,6 @@ Understand the *business context*, define the *ML task*, and identify *success m
 - “Should the model respond in real-time, or is daily batch okay?”
 - “What feedback signals are available—explicit or implicit?”
 
----
 
 ## 🔹 Step 2: Data Strategy & Labeling (5-7 min)
 
@@ -542,7 +540,6 @@ Identify **data sources**, define **labels**, and ensure **data quality**.
 - Mention **position bias**, **selection bias**, **existing system bias**
 - Consider **label noise**, **label delay**, **skewed distributions**
 
----
 
 ## 🔹 Step 3: Feature Engineering & Data Processing (5-7 min)
 
@@ -560,7 +557,6 @@ Design effective features based on entities and user interactions.
   - One-hot vs embeddings
   - Temporal features, normalization
 
----
 
 ## 🔹 Step 4: Modeling & Training Strategy (5-7 min)
 
@@ -579,7 +575,6 @@ Choose appropriate model and training setup.
   - Loss function choice
   - Class imbalance solutions
 
----
 
 ## 🔹 Step 5: Evaluation (5 min)
 
@@ -595,7 +590,6 @@ Measure model performance both offline and online.
 - Metrics: CTR, conversion, dwell time, retention
 - Tradeoffs: precision vs recall, relevance vs diversity
 
----
 
 ## 🔹 Step 6: Deployment & Monitoring (5 min)
 
@@ -615,7 +609,6 @@ Design reliable and scalable deployment.
   - Periodic, incremental
   - Versioning and reproducibility
 
----
 
 ## 🔹 Step 7: Wrap-Up & Trade-offs (3–5 min)
 
@@ -631,7 +624,6 @@ Summarize and showcase holistic thinking.
   - Long-term maintenance
   - Ethics and fairness considerations
 
----
 
 ## 🧩 Bonus Topics (If Time Permits)
 - Cold start solutions (heuristics, hybrid systems)
@@ -640,3 +632,6 @@ Summarize and showcase holistic thinking.
 - Edge cases and failure handling
 
 ---
+
+# <a id="example-questions">💬 Example Questions</a>
+https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn
