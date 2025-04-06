@@ -12,14 +12,14 @@ This guide is intended for people preparing for ML system design interviews. It 
 
    
 # Table of Contents
-- [Machine Learning Concepts](#machine-learning-concepts)
+- [ML Concepts](#ml-concepts)
   - [Regression](#regression)
   - [Classification](#classification)
   - [Natural Language Processing](#natural-language-processing-nlp)
   - [Computer Vision](#computer-vision)
   - [Recommendation & Ranking](#recommendation-and-ranking)
   - [Retrieval](#retrieval)
-- [Machine Learning System Lifecycle](#machine-learning-system-lifecycle)
+- [ML System Lifecycle](#ml-system-lifecycle)
   - [Feature Engineering](#feature-engineering)
   - [Training](#training)
   - [Inference](#inference)
@@ -27,10 +27,10 @@ This guide is intended for people preparing for ML system design interviews. It 
   - [Scaling](#scaling)
   - [Online Metrics](#online-metrics)
   - [Monitoring & Updates](#monitoring-and-update)
-- [Machine Learning System Design Framework](#machine-learning-system-design-framework)
+- [ML System Design Steps Framework](#ml-system-design-steps-framework)
   - [Example Questions](#example-questions)
 
-# 🤖 Machine Learning Concepts <a id="machine-learning-concepts"></a>
+# 🤖 ML Concepts <a id="ml-concepts"></a>
 
 ---
 
@@ -195,16 +195,16 @@ This guide is intended for people preparing for ML system design interviews. It 
   *Example*: If the user has 10 favorite items, and 3 appear in the top-5 recommendations, Recall@5 = 30%.
 
 - **MAP (Mean Average Precision)**: Averaged precision across queries.  
-  *Best when multiple relevant items exist, and their position matters.*
+  Best when multiple relevant items exist, and their position matters.
 
 - **NDCG (Normalized Discounted Cumulative Gain)**: Measures ranking quality by assigning higher importance to relevant items ranked higher.  
-  *Best when higher rank matters more.*
+  Best when higher rank matters more.
 
 - **Coverage**: Measures the percentage of items recommended at least once.  
-  *To ensure every product has a chance to be recommended.*
+  To ensure every product has a chance to be recommended.
 
 - **Diversity**: Ensures that recommended items are varied.  
-  *To prevent repetitive recommendations and improve user experience.*
+  To prevent repetitive recommendations and improve user experience.
   
 ### 🛠️ Typical Recommandation Models
 - **Collaborative Filtering (Matrix Factorization)**  
@@ -265,7 +265,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ---
 
-# 🔄 Machine Learning System Lifecycle <a id="machine-learning-system-lifecycle"></a>
+# 🔄 ML System Lifecycle <a id="ml-system-lifecycle"></a>
 
 ---
 
@@ -496,4 +496,147 @@ Launching a new model or feature with minimal or no historical data.
 
 ---
 
-# Machine Learning System Design Framework
+# 🧠 ML System Design Steps Framework  <a id="ml-system-design-steps-framewor"></a>
+
+⏱️ **Total Duration: ~40 minutes**  
+Each section includes a time estimate to help pace your response.
+
+---
+
+## 🔹 Step 1: Define the Problem (5-7 min)
+
+### 🎯 Goal:
+Understand the *business context*, define the *ML task*, and identify *success metrics*.
+
+### ✅ Checklist:
+- Clarify **user need** and **product impact**
+- Identify **business goals** (e.g. engagement, retention, revenue)
+- Ask about:
+  - Input/output format
+  - Latency/throughput constraints
+  - Real-time vs batch
+  - Expected scale (users, data size)
+- Reframe as ML task:
+  - Classification, regression, ranking, clustering, recommendation, etc.
+
+### 🗣️ Sample Questions:
+- “Is the goal to increase time spent, engagement, or retention?”
+- “Should the model respond in real-time, or is daily batch okay?”
+- “What feedback signals are available—explicit or implicit?”
+
+---
+
+## 🔹 Step 2: Data Strategy & Labeling (5-7 min)
+
+### 🎯 Goal:
+Identify **data sources**, define **labels**, and ensure **data quality**.
+
+### ✅ Checklist:
+- Available data sources
+- Implicit vs explicit labels
+- Manual vs automated labeling
+- Cold start & feedback loop
+- Bias & sampling issues
+
+### 🧠 Tips:
+- Mention **position bias**, **selection bias**, **existing system bias**
+- Consider **label noise**, **label delay**, **skewed distributions**
+
+---
+
+## 🔹 Step 3: Feature Engineering & Data Processing (5-7 min)
+
+### 🎯 Goal:
+Design effective features based on entities and user interactions.
+
+### ✅ Checklist:
+- Key **entities**: users, items, sessions
+- Feature types:
+  - User features (demographics, behavior)
+  - Item features (metadata, embeddings)
+  - Interaction features (clicks, dwell time)
+- Preprocessing:
+  - Handle missing data, outliers
+  - One-hot vs embeddings
+  - Temporal features, normalization
+
+---
+
+## 🔹 Step 4: Modeling & Training Strategy (5-7 min)
+
+### 🎯 Goal:
+Choose appropriate model and training setup.
+
+### ✅ Checklist:
+- Start simple: Baseline → heuristic → ML → DL
+- Justify model based on:
+  - Task complexity
+  - Feature richness
+  - Scale
+- Training details:
+  - Data splits (train/val/test)
+  - Regularization, early stopping
+  - Loss function choice
+  - Class imbalance solutions
+
+---
+
+## 🔹 Step 5: Evaluation (5 min)
+
+### 🎯 Goal:
+Measure model performance both offline and online.
+
+### ✅ Offline:
+- Metrics: Accuracy, Precision@K, Recall@K, AUC, nDCG, MRR
+- Segment-based evaluation (new vs returning users)
+
+### ✅ Online:
+- A/B testing setup
+- Metrics: CTR, conversion, dwell time, retention
+- Tradeoffs: precision vs recall, relevance vs diversity
+
+---
+
+## 🔹 Step 6: Deployment & Monitoring (5 min)
+
+### 🎯 Goal:
+Design reliable and scalable deployment.
+
+### ✅ Checklist:
+- Serving: Real-time vs batch
+- Framework: TorchServe, TF Serving, ONNX
+- Caching, latency optimizations
+- Canary rollout, rollback strategy
+- Monitoring:
+  - Drift detection
+  - Prediction distribution
+  - Alerting/observability
+- Retraining schedule:
+  - Periodic, incremental
+  - Versioning and reproducibility
+
+---
+
+## 🔹 Step 7: Wrap-Up & Trade-offs (3–5 min)
+
+### 🎯 Goal:
+Summarize and showcase holistic thinking.
+
+### ✅ Checklist:
+- 30-second end-to-end summary
+- Key tradeoffs discussed
+- Next steps:
+  - Feedback loop
+  - Explainability
+  - Long-term maintenance
+  - Ethics and fairness considerations
+
+---
+
+## 🧩 Bonus Topics (If Time Permits)
+- Cold start solutions (heuristics, hybrid systems)
+- Multi-objective optimization (relevance, diversity)
+- Privacy (federated learning, DP)
+- Edge cases and failure handling
+
+---
