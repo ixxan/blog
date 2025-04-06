@@ -365,16 +365,16 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 - AutoML: Automate feature selection, model search (NAS), tuning.
 - Distributed Training: Parallelize with data/model parallelism.
 - Regularization: prevents overfitting by adding constraints to the model or altering the training data.
-    - Weight Regularization:
-        - L1 (Lasso): Adds absolute weight penalty (λ * |w|) → Encourages sparsity, good for feature selection.
-        - L2 (Ridge): Adds squared weight penalty (λ * w²) → Shrinks weights to prevent overfitting.
-        - ElasticNet: Combines L1 and L2 penalties.
-    - Dropout: Randomly “drops” neurons during training to prevent co-adaptation and improve generalization.
-    - Data Augmentation: Especially for image/text/audio. Random transformations (e.g., crop, rotate, synonym replacement) to increase diversity of training data.
-    - Early Stopping: Monitor validation loss and stop training when it stops improving.
-    - Batch Normalization: Stabilizes training by normalizing layer inputs. Acts as a mild regularizer.
-    - Label Smoothing: Instead of hard 0/1 targets, use soft targets (e.g., 0.9 for correct class, 0.1 distributed among others). Helps prevent overconfidence.
-    - Adversarial Training: Add small perturbations to inputs during training to improve robustness.
+  - Weight Regularization:
+    - L1 (Lasso): Adds absolute weight penalty (λ * |w|) → Encourages sparsity, good for feature selection.
+    - L2 (Ridge): Adds squared weight penalty (λ * w²) → Shrinks weights to prevent overfitting.
+    - ElasticNet: Combines L1 and L2 penalties.
+  - Dropout: Randomly “drops” neurons during training to prevent co-adaptation and improve generalization.
+  - Data Augmentation: Especially for image/text/audio. Random transformations (e.g., crop, rotate, synonym replacement) to increase diversity of training data.
+  - Early Stopping: Monitor validation loss and stop training when it stops improving.
+  - Batch Normalization: Stabilizes training by normalizing layer inputs. Acts as a mild regularizer.
+  - Label Smoothing: Instead of hard 0/1 targets, use soft targets (e.g., 0.9 for correct class, 0.1 distributed among others). Helps prevent overconfidence.
+  - Adversarial Training: Add small perturbations to inputs during training to improve robustness.
 
 ---
 
