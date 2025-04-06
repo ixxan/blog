@@ -30,6 +30,8 @@ This guide is intended for people preparing for ML system design interviews. It 
 - [ML System Design Steps Framework](#ml-system-design-steps-framework)
   - [Example Questions](#example-questions)
 
+---
+
 # <a id="ml-concepts">🤖 ML Concepts</a>
 
 ---
