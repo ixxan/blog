@@ -634,4 +634,7 @@ Summarize and showcase holistic thinking.
 ---
 
 # <a id="example-questions">💬 Example Questions</a>
-https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn
+- Alex Xu Book Questions: https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn
+- Exponent ML Mock Interviews: https://www.youtube.com/playlist?list=PLrtCHHeadkHqYX7O5cjHeWHzH2jzQqWg5
+- Alireza Dirafzoon Sample Questions: https://github.com/alirezadir/Machine-Learning-Interviews/tree/main/src/MLSD
+- MLE System Interview Prep Template Sample Qeuestions: https://onedrive.live.com/edit?id=52D2FC816A40F7EB!37560&resid=52D2FC816A40F7EB!37560&ithint=file%2Cxlsx&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvcyFBdXYzUUdxQl9OSlNncVU0TGhPVUp0VGNWNDRXalE&migratedtospo=true&wdo=2&cid=52d2fc816a40f7eb
