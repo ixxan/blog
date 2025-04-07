@@ -218,7 +218,7 @@ This guide is intended for people preparing for ML system design interviews. It 
   - **Tradeoffs**: Can't capture user-item interactions well.
 
 - **Hybrid Models**  
-  - **Use when**: You want to combine strengths of collaborative and content methods.  
+  - **Use when**: You want to combine strengths of collaborative and content methods.  Ex: Use CF to see what similar users like and use CBF to re-rank based on your previous taste (attributes of previous likes).
   - **Tradeoffs**: Increased complexity.
 
 - **Deep Learning-based (e.g., Two-tower models)**  
@@ -307,7 +307,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 - **Text**:
   - Tokenization: Word, subword (BPE, WordPiece).
   - Normalization: Lowercasing, stemming, lemmatization, stop-word removal
-  - Vectorization/Embeddings: TF-IDF, Word2Vec, BERT, GPT.
+  - Vectorization/Embeddings: TF-IDF (scoring), Word2Vec (similarity), BERT (context understanding), GPT (generative).
   - Padding & Truncation: To fixed input size.
 - **Images**:
   - Resize, normalize (scale to [0,1]).
@@ -316,6 +316,7 @@ This guide is intended for people preparing for ML system design interviews. It 
   - Conversion: RGB <-> grayscale if needed.
   - Batching: Consider padding for varying sizes (segmentation, detection).
   - Feature extraction (ResNet, EfficientNet).
+  - Vectorization/Embeddings
 - **Videos**:
   - Frame sampling, optical flow analysis.
   - Convert video to embeddings
