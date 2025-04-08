@@ -28,6 +28,7 @@ This guide is intended for people preparing for ML system design interviews. It 
   - [Online Metrics](#online-metrics)
   - [Monitoring & Updates](#monitoring-and-update)
 - [ML System Design Steps Framework](#ml-system-design-steps-framework)
+  - [Example Design](#example-design)
   - [Example Questions](#example-questions)
 
 ---
@@ -650,6 +651,7 @@ Summarize and showcase holistic thinking.
 Below is a social media feed recommender system designed following this step-by-step framework above:
 <img src="./../images/recSystem.png" alt="recSystem" style="clear: both; max-width: 100%; height: auto;">
 
+---
 
 ## <a id="example-questions">💬 Example Questions</a>
 - [Alex Xu Book Questions (YouTube Playlist)](https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn)
