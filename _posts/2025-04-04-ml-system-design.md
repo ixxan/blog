@@ -29,7 +29,7 @@ This guide is intended for people preparing for ML system design interviews. It 
   - [Monitoring & Updates](#monitoring-and-update)
 - [ML System Design Steps Framework](#ml-system-design-steps-framework)
   - [Example Design](#example-design)
-  - [Example Questions](#example-questions)
+  - [Example Questions & Practice Resources](#example-questions-and-practice-resources)
 
 ---
 
@@ -653,7 +653,7 @@ Below is a social media feed recommender system designed following this step-by-
 
 ---
 
-## <a id="example-questions">💬 Example Questions</a>
+## <a id="example-questions-and-practice-resources">💬 Example Questions & Practice Resources</a>
 - [Alex Xu Book Questions (YouTube Playlist)](https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn)
 - [Exponent ML Mock Interviews (YouTube Playlist)](https://www.youtube.com/playlist?list=PLrtCHHeadkHqYX7O5cjHeWHzH2jzQqWg5)
 - [Alireza Dirafzoon Sample Questions (GitHub Repo)](https://github.com/alirezadir/Machine-Learning-Interviews/tree/main/src/MLSD)
