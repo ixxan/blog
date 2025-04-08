@@ -643,12 +643,15 @@ Summarize and showcase holistic thinking.
 - Privacy (federated learning, DP)
 - Edge cases and failure handling
 
-## Example System Design
-Below is a social media feed recommender system designed following this step-by-step framework above:
-<img src="./../images/recSystem.png" alt="recSystem" style="clear: both; max-width: 100%; height: auto;">
 ---
 
-# <a id="example-questions">💬 Example Questions</a>
+## <a id="example-design">🦾 Example Design</a>
+
+Below is a social media feed recommender system designed following this step-by-step framework above:
+<img src="./../images/recSystem.png" alt="recSystem" style="clear: both; max-width: 100%; height: auto;">
+
+
+## <a id="example-questions">💬 Example Questions</a>
 - [Alex Xu Book Questions (YouTube Playlist)](https://www.youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn)
 - [Exponent ML Mock Interviews (YouTube Playlist)](https://www.youtube.com/playlist?list=PLrtCHHeadkHqYX7O5cjHeWHzH2jzQqWg5)
 - [Alireza Dirafzoon Sample Questions (GitHub Repo)](https://github.com/alirezadir/Machine-Learning-Interviews/tree/main/src/MLSD)
