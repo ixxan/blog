@@ -190,25 +190,27 @@ This guide is intended for people preparing for ML system design interviews. It 
 - **Item Attributes**: Metadata about items (e.g., product descriptions, genres, categories). Labelsindicating relevance or ranking order, or relevance scores.
 - **User-Item Interactions**: (User, Item, Score) triplets or implicit feedback such as clicks, views, purchases.  
 
-### 🧪 Offline Metrics
+### 🧪 Offline Metrics for Recommendation
 - **Precision@K**: Fraction of recommended items in the top-K list that are relevant.  
   *Example*: If the system recommends 5 items and 3 are relevant, Precision@5 = 60%.
 
 - **Recall@K**: Fraction of relevant items that are successfully recommended in the top-K list.  
   *Example*: If the user has 10 favorite items, and 3 appear in the top-5 recommendations, Recall@5 = 30%.
 
+- **Coverage**: Measures the percentage of items recommended at least once.  
+  To ensure every product has a chance to be recommended.
+
+- **Diversity**: Ensures that recommended items are varied.  
+  To prevent repetitive recommendations and improve user experience.
+
+### 🧪 Offline Metrics for Ranking
 - **MAP (Mean Average Precision)**: Averaged precision across queries.  
   Best when multiple relevant items exist, and their position matters.
 
 - **NDCG (Normalized Discounted Cumulative Gain)**: Measures ranking quality by assigning higher importance to relevant items ranked higher.  
   Best when higher rank matters more.
 
-- **Coverage**: Measures the percentage of items recommended at least once.  
-  To ensure every product has a chance to be recommended.
 
-- **Diversity**: Ensures that recommended items are varied.  
-  To prevent repetitive recommendations and improve user experience.
-  
 ### 🛠️ Typical Recommandation Models
 - **Collaborative Filtering (Matrix Factorization)**  
   - **Use when**: You have rich user-item interaction data. Recommends items based on past user behaviors.
@@ -227,11 +229,7 @@ This guide is intended for people preparing for ML system design interviews. It 
   - **Tradeoffs**: More complex and resource-intensive.
 
 ### 🛠️ Typical Ranking Models
-- **Learning-to-Rank** (e.g., RankNet, LambdaMART)  
-  - **Use when**: You need to predict the best order of items.  
-  - **Tradeoffs**: Supervised learning requires labeled data and can be complex.
-
-- **Regression-Based Ranking**  
+- **Regression-Based Ranking (Pointwise)**  
   - **Use when**: You have continuous data and need to rank items based on predicted scores.  
   - **Tradeoffs**: May not capture relationships between items as well as more complex models.
 
