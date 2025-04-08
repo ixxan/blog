@@ -377,6 +377,9 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
   - Label Smoothing: Instead of hard 0/1 targets, use soft targets (e.g., 0.9 for correct class, 0.1 distributed among others). Helps prevent overconfidence.
   - Adversarial Training: Add small perturbations to inputs during training to improve robustness.
 
+### Model Store
+- **Object Store** (ex: S3, Blob): saving as trained model artifacts (.pt, .pkl, .onnx, etc.). Can store anywhere, manual version control and logs. 
+- **MLFlows**: for full ML lifecycles. Experiment tracking, model registry (version control), monitoring, CI/CD.
 ---
 
 ## <a id="inference">⚡ Inference</a>
