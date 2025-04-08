@@ -514,15 +514,21 @@ Each section includes a time estimate to help pace your response.
 Understand the *business context*, define the *ML task*, and identify *success metrics*.
 
 ### ✅ Checklist:
+- Lay out assumeptions about the system. 
 - Clarify **user need** and **product impact**
-- Identify **business goals** (e.g. engagement, retention, revenue)
-- Ask about:
-  - Input/output format
-  - Latency/throughput constraints
-  - Real-time vs batch
-  - Expected scale (users, data size)
+- Identify **business objective** (e.g. engagement, retention, revenue)
+- Come up with functional (what the user needs) vs. non-functional (what the system needs) requirements. 
+    - Ask about:
+        - Input/output format
+        - Latency/throughput constraints
+        - Real-time vs batch
+        - Expected scale (users, data size)
 - Reframe as ML task:
   - Classification, regression, ranking, clustering, recommendation, etc.
+  - Input + Output
+- Success metrics
+    - Offline metric for training
+    - Online metric for monitoring, CI/CD
 
 ### 🗣️ Sample Questions:
 - “Is the goal to increase time spent, engagement, or retention?”
@@ -637,6 +643,9 @@ Summarize and showcase holistic thinking.
 - Privacy (federated learning, DP)
 - Edge cases and failure handling
 
+## Example System Design
+Below is a social media feed recommender system designed following this step-by-step framework above:
+<img src="./../images/recSystem.png" alt="recSystem" style="clear: both; max-width: 100%; height: auto;">
 ---
 
 # <a id="example-questions">💬 Example Questions</a>
