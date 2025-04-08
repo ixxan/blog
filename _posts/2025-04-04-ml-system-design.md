@@ -187,7 +187,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ### 📊 Typical Data
 - **User Attributes**: Metadata about users (e.g., Demographics, preferences, browsing history).
-- **Item Attributes**: Metadata about items (e.g., product descriptions, genres, categories). Labelsindicating relevance or ranking order, or relevance scores.
+- **Item Attributes**: Metadata about items (e.g., product descriptions, genres, categories). Labels indicating relevance or ranking order, or relevance scores.
 - **User-Item Interactions**: (User, Item, Score) triplets or implicit feedback such as clicks, views, purchases.  
 
 ### 🧪 Offline Metrics for Recommendation
@@ -379,6 +379,7 @@ Train/Dev/Test (make sure no leakage and ensure generalization!).
 ### Model Store
 - **Object Store** (ex: S3, Blob): saving as trained model artifacts (.pt, .pkl, .onnx, etc.). Can store anywhere, manual version control and logs. 
 - **MLFlows**: for full ML lifecycles. Experiment tracking, model registry (version control), monitoring, CI/CD.
+
 ---
 
 ## <a id="inference">⚡ Inference</a>
