@@ -80,7 +80,7 @@ This guide is intended for people preparing for ML system design interviews. It 
 ### 🛠️ Typical Models
 - **Logistic Regression**  
   - **Use when**: Simple baseline for binary classification.  
-  - **Tradeoffs**: Fast and interpretable, may underperform on complex data.
+  - **Tradeoffs**: Fast and interpretable, may underperform on complex data. Can't solve non-linear problem
 
 - **Decision Trees**: Splits the data based on feature values to classify data.
     - **Use when**: When the data has non-linear patterns.
@@ -210,6 +210,9 @@ This guide is intended for people preparing for ML system design interviews. It 
 - **NDCG (Normalized Discounted Cumulative Gain)**: Measures ranking quality by assigning higher importance to relevant items ranked higher.  
   Best when higher rank matters more.
 
+- **MRR (Mean Reciprocal Rank)**: Measures how high up the first correct/relevant result appears in a ranked list.
+  Best when #1 ranked item matters more.
+
 
 ### 🛠️ Typical Recommandation Models
 - **Collaborative Filtering (Matrix Factorization)**  
@@ -326,8 +329,8 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ### Step 6: Handling Imbalanced Data
 - **Resampling**: 
- - Oversampling (SMOTE, ADASYN): add more underrepresented class 
- - Undersampling (reduce majority class): reduce the number of majority class (can lead to info loss)
+  - Oversampling (SMOTE, ADASYN): add more underrepresented class 
+  - Undersampling (reduce majority class): reduce the number of majority class (can lead to info loss)
 - **Class Weights**: Assign more weights to underrepresented class.
 - **Threshold Tuning**: Adjust using Precision-Recall AUC.
 
@@ -343,7 +346,10 @@ This guide is intended for people preparing for ML system design interviews. It 
 
 ### Data Splits
 Train/Dev/Test (make sure no leakage and ensure generalization!).
-
+- Train set: used to train the model — i.e., learn the patterns, weights, or rules.
+- Dev set: for model selection and hyperparam tuning.
+- Test set: final evaluation before deployment.
+ 
 ### Training Modes
 - Offline Training: Train on historical data.
 - Online Learning: Continuously update with new data.
